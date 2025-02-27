@@ -70,7 +70,7 @@ Your mission is to:
 
 7. **Wait for the call to timeout and disconnect. This simulates an accidental call drop.**
 
-    !!! note "README"
+    !!! Note
         Since the call drop must be system initiated, Queue Q_CallDrop has been pre-configured with a maximum time in queue of 10 seconds (pictured in screenshot from Control Hub). Wait in the queue for about 10 seconds for the system to drop the call "automatically". 
     
     ![Profiles](../graphics/Lab2/CallDropSum_DummyQueue.png)
