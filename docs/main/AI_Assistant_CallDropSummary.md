@@ -24,7 +24,7 @@ Your mission is to:
 2. Your task is to test AI Assistant Call Drop Summary feature</br>
 
 
-!!! warning "README"
+!!! Note
     This model requires meaningful audio to transcribe and provide a summary of the conversation. You will need to simulate both the customer and the agent speaking. If you have any questions, reach out to the lab instructors for help.</br>
 
     For the current mission, an optimal way to test is by using your cellphone with the Webex App installed. However, if you use the same device for both the caller and the agent, here’s a tip: mute your cellphone when speaking as the agent and mute your Agent Desktop when speaking as the customer.
