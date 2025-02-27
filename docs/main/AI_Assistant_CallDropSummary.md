@@ -55,16 +55,16 @@ Your mission is to:
 
 <!-- md:option type:note -->
 
-!!! note "Call Drop Summary Script"
-    **Agent**: Good morning, thank you for calling Airway Express. My name is Michelle. How can I assist you today?
+    !!! note "Call Drop Summary Script"
+        **Agent**: Good morning, thank you for calling Airway Express. My name is Michelle. How can I assist you today?
 
-    **Customer**: Hi Michelle, I'm having an issue trying to make an adjustment to a flight I have with you. I booked a flight from Amsterdam to London, but now I need to add a leg to go from London to New York a couple of days later. I just can't seem to do it through the website.
+        **Customer**: Hi Michelle, I'm having an issue trying to make an adjustment to a flight I have with you. I booked a flight from Amsterdam to London, but now I need to add a leg to go from London to New York a couple of days later. I just can't seem to do it through the website.
 
-    **Agent**: I'm sorry to hear you're experiencing issues with our app. I can definitely help you with that. Could I have your flight confirmation number to start with, please?
+        **Agent**: I'm sorry to hear you're experiencing issues with our app. I can definitely help you with that. Could I have your flight confirmation number to start with, please?
 
-    **Customer**: <..Silence..>
+        **Customer**: <..Silence..>
 
-    **Agent**: Hello, hello, hello
+        **Agent**: Hello, hello, hello
 
 6. From the Agent Call Controls, transfer the call to transfer call to the Queue **`Q_CallDrop`**. Click the “Queue” radio button to search for this Queue.
 
