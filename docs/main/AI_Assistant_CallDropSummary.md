@@ -7,13 +7,9 @@ icon: material/medal
 
 # Mission 4: AI Assistant - Call Drop Summary
 
-## <span style="color: red;">**Disclaimer**</span></summary>
-Please note that the AI Agent is scheduled for General Availability (GA) in Q1 of the 2025 calendar year (CY25). This exercise is designed to provide you with an early glimpse and understanding of the feature's capabilities. We appreciate your participation and value your feedback as we refine this offering ahead of its official release.
-
-
 ## Story
 
-As a visitor to Amsterdam, you want to quickly find restaurants offering various international cuisines in the city and easily figure out how to get to them from your current location at the RAI.
+As the agent answers the call, a Webex Contact Center AI popup appears, summarizing the previous conversation before the call was dropped. Armed with this insight, the agent seamlessly picks up where they left off, ensuring a smooth customer experience.
 
 ### Call Flow Overview
 
