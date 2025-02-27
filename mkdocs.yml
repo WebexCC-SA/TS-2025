@@ -131,12 +131,13 @@ nav:
             - "Mission 1: AI in Action (Autonomous Agent)": ./main/AIAgentTrack_Mission1.md
 ##          - "Mission 2: AI in Action (Scripted Agent)": ./main/AIAgentTrack_Mission2.md
 ##          - "Mission 3: Seamless AI to Human Agent Handoffs": ./main/AIAgentTrack_Mission3.md
-##      - Conclusion: ./main/AIAgentTrack_Conclusion.md
-##  - FINAL CHALLENGE:
-##      - Troubleshooting Mission:
-##            - "Final Challenge: Production flow is failing!": ./main/FinalBossFight_Mission.md
-##            - "Hint for Final Challenge Mission!": ./main/FinalBossFight_Hint1.md
-##            - "Solution Guidance for Final Challenge Fight Mission!": ./main/FinalBossFight_Solution.md
+            - "Mission 4: Call Drop Summary": ./main/AI_Assistant_CallDropSummary.md
+      - Conclusion: ./main/AIAgentTrack_Conclusion.md
+  - FINAL CHALLENGE:
+      - Troubleshooting Mission:
+            - "Final Challenge: Production flow is failing!": ./main/FinalBossFight_Mission.md
+            - "Hint for Final Challenge Mission!": ./main/FinalBossFight_Hint1.md
+            - "Solution Guidance for Final Challenge Fight Mission!": ./main/FinalBossFight_Solution.md
   - Quick Links: quicklinks.md
   - Ask a Question<i class="fa-solid fa-hand" style="color:#63E6BE;"></i>: slido-QA-iFrame.md
 
