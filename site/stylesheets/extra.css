@@ -257,3 +257,18 @@
 .youtube {
   color: #EE0F0F;
 }
+.copy::after {
+  content: "\f0c5"; /* Font Awesome code for the copy icon */
+  font-family: "Font Awesome 5 Free"; /* The font-family may vary, ensure it matches the imported version */
+  font-weight: 900; /* Ensure the weight matches the icon style */
+  font-style: normal;
+  text-decoration: inherit;
+  display: inline-block; /* Ensure the icon is visible */
+  margin-left: 5px; /* Optional: Add space between text and icon */
+
+}
+
+.copy:hover::after {
+  color: #00bdeb;
+}
+  
