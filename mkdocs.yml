@@ -47,10 +47,10 @@ extra_javascript:
   - js/attendee-id.js
 plugins:
   - search
-  - with-pdf:
-      cover_title: TS-2025
-      cover_subtitle: "From Good to Great: Enhancing Customer Experience with the Webex Contact Center Flow Designer"
-      cover_logo: template_assets/Cisco-Live-White-Blue-APJC.svg
+  #- with-pdf:
+  #    cover_title: TS-2025
+  #    cover_subtitle: "From Good to Great: Enhancing Customer Experience with the Webex Contact Center Flow Designer"
+  #    cover_logo: template_assets/Cisco-Live-White-Blue-APJC.svg
   - glightbox:
       touchNavigation: true
       loop: false
