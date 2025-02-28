@@ -5,7 +5,7 @@ icon: material/medal
 
 
 
-# Mission 1: AI Autonomous Agent in Action <span style="color: blue;">(BONUS)</span></summary>
+# Mission 1: AI Autonomous Agent in Action <span style="color: blue;">(BONUS)</span></summary> 
 
 ## <span style="color: red;">**Disclaimer**</span></summary>
 Please note that the AI Agent is scheduled for General Availability (GA) in Q1 of the 2025 calendar year (CY25). This exercise is designed to provide you with an early glimpse and understanding of the feature's capabilities. We appreciate your participation and value your feedback as we refine this offering ahead of its official release.
