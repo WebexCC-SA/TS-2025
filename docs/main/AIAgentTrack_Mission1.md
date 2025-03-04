@@ -11,6 +11,9 @@ icon: material/medal
 Please note that the AI Agent is scheduled for General Availability (GA) in Q1 of the 2025 calendar year (CY25). This exercise is designed to provide you with an early glimpse and understanding of the feature's capabilities. We appreciate your participation and value your feedback as we refine this offering ahead of its official release.
 
 
+## <span style="color: blue;">**Recommendation**</span></summary>
+**If the AI Agent feature is already enabled on your Gold Tenant via the Beta Portal, we recommend using it there instead of the shared environment. This helps avoid tenant limitations, such as the maximum of 100 configurable AI Agents.**
+
 **<details><summary>Good to Know <span style="color: orange;">[Optional]</span></summary>**
 
 ### AI Autonomous Agent Overview

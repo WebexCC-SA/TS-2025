@@ -130,7 +130,7 @@ nav:
   - AI AGENT TRACK:
       - Lab Guide:
             - "Mission 1: AI in Action (Autonomous Agent)": ./main/AIAgentTrack_Mission1.md
-            - "Mission 2: AI in Action (Scripted Agent)": ./main/AIAgentTrack_Mission2.md
+            - "Mission 2: AI in Action (Scripted Agent)": ./main/AIAgentTrack_NewUI_Mission2.md
             - "Mission 3: Seamless AI to Human Agent Handoffs": ./main/AIAgentTrack_Mission3.md
             - "Mission 4: Call Drop Summary": ./main/AI_Assistant_CallDropSummary.md
       - Conclusion: ./main/AIAgentTrack_Conclusion.md
