@@ -37,35 +37,41 @@ This mission is designed to provide an in-depth understanding of the Webex AI Ag
 
 #### Creating a AI Agent using a Template
 
+0. <span style="color: red;">[IMPORTANT]</span> [Download](https://drive.google.com/drive/folders/1b8x_om4rQonuJ52wRYif1LPP5qEX4RDI?usp=sharing){:target="_blank"} source file from shared folder.
+    
+    > 
+    > **TaskBot_Template.json** - The Appointment Booking template for the AI Agent in Webex Contact Center enables customers to schedule, reschedule, or cancel appointments through an AI-powered virtual agent, integrating with backend systems for real-time availability and confirmations.
+    >
+
 1. Login into [Webex Control Hub](https://admin.webex.com){:target="_blank"} by using your Admin profile **wxcclabs+admin_ID<span class="attendee-id-placeholder">Your_Attendee_ID</span>@gmail.com**. You will see another login screen with OKTA on it where you may need to enter the email address again and the password provided to you.
 
 2. Go to Contact Center from the left side navigation panel, and under Quick Links, click on **Webex AI Agent**
 
-    ![Profiles](../graphics/Lab1/L1M6_OpenWebexAI.gif)  
+    ![Profiles](../graphics/AI_Track/AI_Scripted_OpenWebexAI.gif)  
 
-3. Click on **Create agent** to create a new bot. Select the **Appointment Booking** Template and click on **Next** button.
-4. Agent Name **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_TaskBot_CL2025">Your_Attendee_ID</span>_TaskBot_CL2025<span class="copy" title="Click to copy!"></span></span>** and click **Create**
-5. Make the bot live by clicking on the **Make Live** button on the top right.
-6. Enter **v1** in the popup modal which appears after clicking on **Make Live**.
+3. Click on **Import agent** to create a new bot by importing preconfigured template. Click on **Upload** button, locate and select **TaskBot_Template.json** you downloaded at the beginning of the mission..
+4. Name your Agent as **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_TaskBot">Your_Attendee_ID</span>_TaskBot<span class="copy" title="Click to copy!"></span></span>** and click **Import**
+5. Make the bot live by clicking on the **Publish** button on the top right.
+6. Enter **v1** in the popup window, then click **Publish**.
 
-    ![Profiles](../graphics/Lab1/L1M6_TaskBot_Create.gif)  
+    ![Profiles](../graphics/AI_Track/AI_Scripted_TaskBot_Create.gif)  
 
-7. Click on the **Preview** button on the top right side to test the bot. Try the bot flow by typing ***"I would like to cancel an appointment"***<span class="copy-static" title="Click to copy!" data-copy-text="I would like to cancel an appointment"><span class="copy"></span></span>
+7. Click on the **Preview** button on the top right side to test the bot. Try the bot flow by typing ***"I would like to book an appointment with mortgage specialist"***<span class="copy-static" title="Click to copy!" data-copy-text="I would like to cancel an appointment"><span class="copy"></span></span>
 
     <!-- md:option type:note -->
     
     !!! note "Sample Conversation"
         **AI Agent**: Welcome to Cumulus Healthcare. How may I assist you today?</br>
-        **You**: "I would like to cancel an appointment"</br>
+        **You**: I would like to cancel an appointment</br>
         **AI Agent**: Please provide the patient's 6-digit insurance number.</br>
-        **You**:"123456"</br>
+        **You**:123456</br>
         **AI Agent**: Please provide your 10-digit phone number.</br>
-        **You**:"0123456789"</br>
+        **You**:0123456789</br>
         **AI Agent**: You have an appointment on 20/01/2025 at 15:00. Would you like to cancel it?</br>
-        **You**:"yes"</br>
+        **You**:yes</br>
         **AI Agent**: Your appointment for 20/01/2025 at 15:00 is cancelled.</br>
 
-    ![Profiles](../graphics/Lab1/L1M6_TaskBot_Preview.gif)  
+    ![Profiles](../graphics/AI_Track/AI_Scripted_TaskBot_Preview.gif)  
 
 ---
 
@@ -94,7 +100,7 @@ This mission is designed to provide an in-depth understanding of the Webex AI Ag
     >
     > Contact Center AI Config: **Webex AI Agent (Scripted)**
     >
-    > Virtual Agent: **<span class="attendee-id-placeholder" data-suffix="_TaskBot_CL2025">Your_Attendee_ID</span>_TaskBot_CL2025**
+    > Virtual Agent: **<span class="attendee-id-placeholder" data-suffix="_TaskBot">Your_Attendee_ID</span>_TaskBot**
 
 
 4. On bottom right corner toggle **Validation** from **Off** to **On**
@@ -128,7 +134,7 @@ In this step, we will learn how to update bot responses and test these changes, 
     ![Profiles](../graphics/Lab1/L1M6_OpenWebexAI.gif)  
 
 
-3. Search and open your bot **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_TaskBot_CL2025">Your_Attendee_ID</span>_TaskBot_CL2025<span class="copy" title="Click to copy!"></span></span>** that you created earlier. Then go to the **Responses** tab on the left-hand panel.
+3. Search and open your bot **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_TaskBot">Your_Attendee_ID</span>_TaskBot<span class="copy" title="Click to copy!"></span></span>** that you created earlier. Then go to the **Responses** tab on the left-hand panel.
     
     >
     > Select the **Welcome message** in **Default message**
