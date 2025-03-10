@@ -64,11 +64,11 @@ This mission is designed to provide an in-depth understanding of the Webex AI Ag
         **AI Agent**: Welcome to Cumulus Healthcare. How may I assist you today?</br>
         **You**: I would like to cancel an appointment</br>
         **AI Agent**: Please provide the patient's 6-digit insurance number.</br>
-        **You**:123456</br>
+        **You**: 123456</br>
         **AI Agent**: Please provide your 10-digit phone number.</br>
-        **You**:0123456789</br>
+        **You**: 0123456789</br>
         **AI Agent**: You have an appointment on 20/01/2025 at 15:00. Would you like to cancel it?</br>
-        **You**:yes</br>
+        **You**: yes</br>
         **AI Agent**: Your appointment for 20/01/2025 at 15:00 is cancelled.</br>
 
     ![Profiles](../graphics/AI_Track/AI_Scripted_TaskBot_Preview.gif)  
@@ -134,23 +134,25 @@ In this step, we will learn how to update bot responses and test these changes, 
     ![Profiles](../graphics/Lab1/L1M6_OpenWebexAI.gif)  
 
 
-3. Search and open your bot **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_TaskBot">Your_Attendee_ID</span>_TaskBot<span class="copy" title="Click to copy!"></span></span>** that you created earlier. Then go to the **Responses** tab on the left-hand panel.
+3. Search and open your bot **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_TaskBot">Your_Attendee_ID</span>_TaskBot<span class="copy" title="Click to copy!"></span></span>** that you created earlier. 
+
+4. In the **Configuration** menu navigate to **Script** tab, then **Responses** tab
     
     >
     > Select the **Welcome message** in **Default message**
     >
     > Update the text to ***"Welcome to Cumulus Healthcare. How may I assist you today?"***<span class="copy-static" title="Click to copy!" data-copy-text="Welcome to Cumulus Healthcare. How may I assist you today?"><span class="copy"></span></span> for the Default (web) channel.
     >
-    > Navigate to the Voice Channel and update the text to ***"Welcome to Cumulus Healthcare. How may I assist you today?"***<span class="copy-static" title="Click to copy!" data-copy-text="Welcome to Cumulus Healthcare. How may I assist you today?"><span class="copy"></span></span>
+    > Switch to the Voice Channel and update the text to ***"Welcome to Cumulus Healthcare. How may I assist you today?"***<span class="copy-static" title="Click to copy!" data-copy-text="Welcome to Cumulus Healthcare. How may I assist you today?"><span class="copy"></span></span>
     >
-    > Click on the update button to confirm the changes. Make the bot live by clicking on the **Make Live** button
+    > Click on the **Save** button to confirm the changes. Make the bot live by clicking on the **Publish** button. Add a version name on pop-up window and click **Publish** again. 
 
-    ![Profiles](../graphics/Lab1/L1M6_UpdateResponse.gif) 
+    ![Profiles](../graphics/AI_Track/AI_Scripted_TaskBot_UpdateWelcome.gif)
 
 
 4. Click on **Preview** to test if the Greeting has been successfully updated.
 
-    ![Profiles](../graphics/Lab1/L1M6_UpdateResponsePreview.gif)
+    ![Profiles](../graphics/AI_Track/AIScripted_UpdatWelcomePreview.gif)
 
 ---
 
