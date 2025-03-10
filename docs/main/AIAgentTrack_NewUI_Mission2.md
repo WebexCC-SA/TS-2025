@@ -150,7 +150,7 @@ In this step, we will learn how to update bot responses and test these changes, 
     ![Profiles](../graphics/AI_Track/AI_Scripted_TaskBot_UpdateWelcome.gif)
 
 
-4. Click on **Preview** to test if the Greeting has been successfully updated.
+5. Click on **Preview** to test if the Greeting has been successfully updated.
 
     ![Profiles](../graphics/AI_Track/AIScripted_UpdatWelcomePreview.gif)
 
@@ -161,21 +161,16 @@ In this step, we will learn how to update bot responses and test these changes, 
 In this step, we will learn how to add new intents and entities to enhance the bot's ability to understand and respond to a broader range of user inputs. These updates will be tested in both preview mode and during a live call to confirm that the bot correctly identifies the new intents and entities and provides appropriate responses.
 
 
-1. To expedite the completion of this lab, it is recommended to remove all languages except the default language(English), and proceed with the lab. After disabling all the languages please make sure to hit on **Save changes** and you should see a green **Agent updated** message that confirms the action. 
-
-    ![Profiles](../graphics/Lab1/L1M6_LangRemoval.gif)
-
-
-2. Navigate to the Training Tab from the left-hand panel and click on the **Create Intent** button located in the top right corner.
-3. Add a new intent by providing the intent name as ***ReferralRequest***<span class="copy-static" title="Click to copy!" data-copy-text="ReferralRequest"><span class="copy"></span></span> and include the following two utterances:
+1. While on the **Script** configuration page, switch to **Intents** tab and click on the **Create Intent** button located in the top right corner.
+2. Add a new intent by providing the intent name as ***ReferralRequest***<span class="copy-static" title="Click to copy!" data-copy-text="ReferralRequest"><span class="copy"></span></span> and include the following two utterances:
 
     - ***I would like a referral for a cardiologist.***<span class="copy-static" title="Click to copy!" data-copy-text="I would like a referral for a cardiologist."><span class="copy"></span></span>
     - ***I need a referral to visit a neurologist.***<span class="copy-static" title="Click to copy!" data-copy-text="I need a referral to visit a neurologist."><span class="copy"></span></span>
 
-    ![Profiles](../graphics/Lab1/L1M6_AddUtterance.gif) 
+    ![Profiles](../graphics/AI_Track/AIScripted_AddUtterance.gif) 
 
 
-4. Click on **Link entity** and add **patient phone number** as an entity.
+3. Click on **+ Link** and add **patient phone number** as an entity.
 
     >
     > Check the **Required** checkbox 
@@ -183,41 +178,39 @@ In this step, we will learn how to add new intents and entities to enhance the b
     > Select the template key as **askPhoneNumber**, which will be used to prompt the patient for their phone number.
     
 
-5. Again, click on **Link Entity** and add **patient dob** (date of birth) 
+4. Again, click on **+ Link** and add **patient dob** (date of birth) 
 
     > 
     > Check **Required** checkbox
     > 
     > Select the template key as **askPatientDob**. When this intent is matched, it will trigger the Virtual Agent to ask the user to provide their phone number and date of birth for verification purposes.
 
-      ![Profiles](../graphics/Lab1/L1M6_AddLinkEntity.gif) 
+      ![Profiles](../graphics/AI_Track/AIScripted_AddLinkEntity.gif) 
 
 
-6. On the same page at the bottom, click on Response drop-down list with **Final Template Key** and scroll down to **Create new**.
+6. On the same page in **Response** section at the bottom, click on **Select a response** drop down list and scroll down to **Create new**.
 
     > 
     > Template key: **ReferralResp**<span class="copy-static" title="Click to copy!" data-copy-text="ReferralResp"><span class="copy"></span></span>
     > 
-    > Text Response (Optional): ***Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?***<span class="copy-static" title="Click to copy!" data-copy-text="our request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?"><span class="copy"></span></span>
+    > On **Default (Web)** tab replace the text with: ***Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?***<span class="copy-static" title="Click to copy!" data-copy-text="Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?"><span class="copy"></span></span>
     >
-    > Click **Create**
+    > Click on **+** next to **Default (Web)** and select **Voice**
+    >
+    > In the Text section replace the text with: ***Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?***<span class="copy-static" title="Click to copy!" data-copy-text="Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?"><span class="copy"></span></span>
+    >
+    > Click on **Create**.
 
- 7. Click on **Save**.
+ 7. Click on **Add**.
+ 8. Click on the **Save Changes** button to confirm the changes. Make the bot live by clicking on the **Publish** button. Add a version name on pop-up window and click **Publish** again. 
 
-     ![Profiles](../graphics/Lab1/L1M6_AddResponse.gif) 
+     ![Profiles](../graphics/AI_Track/AIScripted_AddResponse.gif) 
 
 
-8. Return to the Training tab and click on the **Train** button to update the bot's understanding with the new intent and entities.
-9. Add a comment such as ***Added referral request intent***<span class="copy-static" title="Click to copy!" data-copy-text="Added referral request intent"><span class="copy"></span></span> to track the changes.
-10. Click on **Make Live** to update the live version of the bot with these changes.
-11. Provide a description for the update and choose **Make Live** or **Make Live both** if there are other unsaved changes pending.
+9. Use the **Preview** feature to test the bot flow with the input query: ***I need a referral for a cardiologist***<span class="copy-static" title="Click to copy!" data-copy-text="I need a referral for a cardiologist"><span class="copy"></span></span>.</br>
+10. You can also test this interaction in voice mode by dialing the Supported Number assigned to your pod.
 
-    ![Profiles](../graphics/Lab1/L1M6_Train&makelive.gif) 
-
-12. Use the **Preview** feature to test the bot flow with the input query: ***I need a referral for a cardiologist***<span class="copy-static" title="Click to copy!" data-copy-text="I need a referral for a cardiologist"><span class="copy"></span></span>.
-13. You can also test this interaction in voice mode by dialing the Supported Number assigned to your pod.
-
-    ![Profiles](../graphics/Lab1/L1M6_NewIntentPreview.gif) 
+    ![Profiles](../graphics/AI_Track/AIScripted_NewIntentPreview.gif) 
 
 ---
 
@@ -225,26 +218,22 @@ In this step, we will learn how to add new intents and entities to enhance the b
 
 In this step, we will learn how to enhance the bot's capabilities by adding training data using generative AI and validate the changes by making a call.
 
-1. Return to the **Referral Request** intent that you created in the previous exercise.
+1. While on the **Script** configuration page, navigate to **Intents** tab and select **ReferralRequest** intent that you created in the previous exercise.
 
-2. Click on the "Generate" button to utilize Generative AI for creating additional training phrases.
+2. Click on the **Generate** button to utilize Generative AI for creating additional training phrases.
 
-3. Enter a description such as ***"generate intents for requesting a referral to different doctor specialties from primary care."***<span class="copy-static" title="Click to copy!" data-copy-text="generate intents for requesting a referral to different doctor specialties from primary care."><span class="copy"></span></span> Set the Number of Variants to **10**, which will determine the number of new phrases to be generated.
+3. Enter a description such as ***"Generate intents for requesting a referral to different doctor specialties from primary care."***<span class="copy-static" title="Click to copy!" data-copy-text="Generate intents for requesting a referral to different doctor specialties from primary care."><span class="copy"></span></span> Set the Number of Variants to **10**, which will determine the number of new phrases to be generated.
 
-     ![Profiles](../graphics/Lab1/L1M6_CreateGenAIIntent.gif)  
+4. Click on **Save**.
+
+5. Click on the **Save Changes** button to confirm the changes. Make the bot live by clicking on the **Publish** button. Add a version name on pop-up window and click **Publish** again. 
+
+     ![Profiles](../graphics/AI_Track/AIScripted_CreateGenAIIntent.gif)  
 
 
-4. Once the new phrases are generated, click on the **Save** button located in the top right corner to add them to your intent.
-5. Navigate back to the Training tab and click on the **Train** button to incorporate the new generative data into the bot's model.
-6. Add a comment such as ***"added generative training data"***<span class="copy-static" title="Click to copy!" data-copy-text="added generative training data"><span class="copy"></span></span> to keep track of this specific update.
-7. Click on the **Make Live** button situated in the top right corner to apply the changes to the live version of your bot.
-8. Confirm the update by clicking on **Make Live** or **Make Live both** if there are other unsaved changes pending.
+6. Test the updated bot flow by using the **Preview** button and inputting queries related to the new training data.
 
-     ![Profiles](../graphics/Lab1/L1M6_TrainNMakeLive.gif)  
-
-9. Test the updated bot flow by using the **Preview** button and inputting queries related to the new training data.
-
-     ![Profiles](../graphics/Lab1/L1M6_PreviewNTest.gif)
+     ![Profiles](../graphics/AI_Track/AIScripted_PreviewGenAI.gif)
 
 ---
 
@@ -258,13 +247,13 @@ In this step, we will explore how to access and analyze bot transcripts and anal
 
 3. Review the transcript for the selected interaction to gain insights into how the conversation unfolded.
 
-    ![Profiles](../graphics/Lab1/L1M6_AnalyzeSession.gif)
+    ![Profiles](../graphics/AI_Track/AIScripted_AnalyzeSession.gif)
 
 4. Click on individual messages from the user to examine the intents and entities identified by the Virtual Agent during the conversation.
 
 5. By carefully analyzing these transcripts and analytics, you can identify areas for improvement, understand user behavior, and refine the Virtual Agent's performance accordingly. 
 
-    ![Profiles](../graphics/Lab1/L1M6_AnalyzeDeepDive.gif)
+    ![Profiles](../graphics/AI_Track/AIScripted_AnalyzeDeepDive.gif)
 
 
-<p style="text-align:center"><strong>Congratulations, you have officially completed the Cisco Virtual Assistant mission! 🎉🎉 </strong></p>
+<p style="text-align:center"><strong>Congratulations, you have officially completed the Cisco Virtual Agent mission! 🎉🎉 </strong></p>
