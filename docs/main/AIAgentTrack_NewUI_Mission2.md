@@ -56,7 +56,7 @@ This mission is designed to provide an in-depth understanding of the Webex AI Ag
 
     ![Profiles](../graphics/AI_Track/AI_Scripted_TaskBot_Create.gif)  
 
-7. Click on the **Preview** button on the top right side to test the bot. Try the bot flow by typing ***"I would like to book an appointment with mortgage specialist"***<span class="copy-static" title="Click to copy!" data-copy-text="I would like to cancel an appointment"><span class="copy"></span></span>
+7. Click on the **Preview** button on the top right side to test the bot. Try the bot flow by typing ***"I would like to cancel an appointment"***<span class="copy-static" title="Click to copy!" data-copy-text="I would like to cancel an appointment"><span class="copy"></span></span>
 
     <!-- md:option type:note -->
     
@@ -195,9 +195,11 @@ In this step, we will learn how to add new intents and entities to enhance the b
     > 
     > On **Default (Web)** tab replace the text with: ***Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?***<span class="copy-static" title="Click to copy!" data-copy-text="Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?"><span class="copy"></span></span>
     >
-    > Click on **+** next to **Default (Web)** and select **Voice**
-    >
-    > In the Text section replace the text with: ***Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?***<span class="copy-static" title="Click to copy!" data-copy-text="Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?"><span class="copy"></span></span>
+    >> [Optional]: Adding text to a **Voice** is not mandatory as **Default (Web)** works here as well. But you can slightly change the message depending on the channel.
+    >>  
+    >> Click on **+** next to **Default (Web)** and select **Voice**
+    >>
+    >> In the Text section replace the text with: ***Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?***<span class="copy-static" title="Click to copy!" data-copy-text="Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?"><span class="copy"></span></span>
     >
     > Click on **Create**.
 
