@@ -350,6 +350,7 @@ Your mission is to:
     >
     > Path Expression: **`$[0].resolutionDate`**<span class="copy-static" data-copy-text="$[0].resolutionDate"><span class="copy" title="Click to copy!"></span></span>
 
+    ![Profiles](../graphics/APIFunction/API_Function7.gif)
 
 4. Add **Set Variable** node
     
@@ -360,90 +361,82 @@ Your mission is to:
     >
     > We will connct **Set Variable** node in next step
     >
-    > Variable: **HTTPResponse**<span class="copy-static" data-copy-text="HTTPResponse"><span class="copy" title="Click to copy!"></span></span>
+    > Variable: **`HTTPResponse`**<span class="copy-static" data-copy-text="HTTPResponse"><span class="copy" title="Click to copy!"></span></span>
     >
-    > Set To Variable: **GET_HTTPRequest.httpResponseBody**<span class="copy-static" data-copy-text="GET_HTTPRequest.httpResponseBody"><span class="copy" title="Click to copy!"></span></span>
+    > Set To Variable: **`GET_HTTPRequest.httpResponseBody`**<span class="copy-static" data-copy-text="GET_HTTPRequest.httpResponseBody"><span class="copy" title="Click to copy!"></span></span>
     >
 
+    ![Profiles](../graphics/APIFunction/API_Function8.gif)
 
-5. Switch to **Functions** in the left menu. Then drag **<span class="attendee-id-container">FunctionFlow_<span class="attendee-id-placeholder" data-prefix="FunctionFlow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** node to the canvas.
+5. Switch to **Functions** tab in the left menu. Then drag **<span class="attendee-id-container">FunctionFlow_<span class="attendee-id-placeholder" data-prefix="FunctionFlow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** node to the canvas.
     >
-    > Connect **GET_HTTPRequest** to this node
+    > Connect **HTTP_Response** to this node
     >
-    > We will connct **Set Variable** node in next step
+    > We will connect this node in next step
+    >
+    > Function Version Label: **Latest**
+    >
+    > **Function Input Variables** should auto populate
+    > 
+    > **Output Settings**
+    >
+    >> Output Variable: **`personalizedMessage`**<span class="copy-static" data-copy-text="personalizedMessage"><span class="copy" title="Click to copy!"></span></span>
+    >>
+    >> Path Expression **`$.personalizedMessage`**<span class="copy-static" data-copy-text="personalizedMessage"><span class="copy" title="Click to copy!"></span></span>
 
-
-8. Open a **Queue** Node and set **Fallback Queue** to **CCBU_Fallback_Queue**. That is needed to make sure the call will find an end queue in case API GET call fails.
-
-9. Open **GoTo_x19** node and set:
-
-    > Destination Type: **Flow**
-    >
-    > Static Flow
-    >
-    > Flow: **CLTS_ErrorHandling_Flow**
-    >
-    > Choose Version Label: **Latest**
+6. Switch to **Activity** tab in the left menu. Add **Play Message** and **Disconnect Contact** nodes 
     
-10. Open **GoTo_8ca** and set:
-
-    > Destination Type: **Entry Point**
     >
-    > Static Entry Point
+    > Connect the **Function** node edge to this **Play Message** node
     >
-    > Entry Point: **CLTS_ErrorHandling_Channel**
+    > Enable Text-To-Speech
+    >
+    > Select the Connector: **Cisco Cloud Text-to-Speech**
+    >
+    > Click the Add Text-to-Speech Message button
+    >
+    > Delete the Selection for Audio File
+    >
+    > Text-to-Speech Message: **{{personalizedMessage}}**<span class="copy-static" data-copy-text="{{personalizedMessage}}"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > Connect the **Play Message** node edge to this **Disconnect Contact** node
 
- 
-11. Repeat node settings in **Step 9** for **GoTo_uyn**
+7.  Publish your flow
 
-12. Repeat node settings in **Step 10** for **GoTo_dbr**
+    > Turn on Validation at the bottom right corner of the flow builder
+    >
+    > If there are no Flow Errors, Click **Publish**
+    >
+    > Add a publish note
+    >
+    > Add Version Label(s): **Latest** 
+    >
+    > Click **Publish** Flow
 
-    ![Profiles](../graphics/Lab2/BM2-11-15-FallbackQ.gif)
-
-13. **Validate** and **Publish** flow
-
-14. In Popped up window click on dropdown menu to select **Latest** label, then click **Publish**
-
-15. Switch to Control Hub and navigate to **Channels** under Customer Experience Section
+12. Map your flow to your inbound channel
     
-    > 
-    > Locate your Inbound Channel (you can use the search):  **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>**
-    > 
-    > Select the Routing Flow: **<span class="attendee-id-container">DynamicVariables_<span class="attendee-id-placeholder" data-prefix="DynamicVariables_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**
-    > 
+    > Navigate to Control Hub > Contact Center > Channels
+    >
+    > Locate your Inbound Channel (you can use the search): **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>**
+    >
+    > Select the Routing Flow: **<span class="attendee-id-container">FunctionFlow_<span class="attendee-id-placeholder" data-prefix="FunctionFlow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**
+    >
     > Select the Version Label: **Latest**
-    > 
+    >
     > Click **Save** in the lower right corner of the screen
-
-    ![Profiles](../graphics/Lab2/BM2-18-ChannelChange.gif)
 
 
 ## Testing
 
-1. Your Agent desktop session should be still active but if not, use Webex CC Desktop application ![profiles](../graphics/overview/Desktop_Icon40x40.png) and login with agent credentials you have been provided **<span class="attendee-id-container">wxcclabs+agent_ID<span class="attendee-id-placeholder" data-prefix="wxcclabs+agent_ID" data-suffix="@gmail.com">Your_Attendee_ID</span>@gmail.com<span class="copy" title="Click to copy!"></span></span>**. You will see another login screen with OKTA on it where you may need to enter the email address again and the password provided to you. 
+1. Open your Webex App and dial the Support Number provided to you, which is configured in your **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Channel** configuration.
 
-2. Select Team **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Team**. Click **Submit**. Allow browser to access Microphone by clicking **Allow** on ever visit.
+   ![profiles](../graphics/Lab1/WxApp_Test.gif)
 
-3. Make your agent ***Available*** and you're ready to make a call.
+2. Verify if you hear a message build inside your function.
 
-    ![profiles](../graphics/Lab1/5-Agent_Login.gif)
+3. Switch to Flow Designer and click Debug tab at the bottom and select last interaction (first in the list)
 
-4. Change the status of your agent to **Available** and make a call to test you flow. If everyhing configured as per instructions you should hear a **welcome1** message that is a value of ***$[0].welcomePrompt1*** and then ***$[0].welcomePrompt2***. Finally the call should land on the ***$[0].queue***
-
-### <span style="color: orange;">[Optional]</span> Test other variables
-
-5. You can do the same trick we did in Mission 2 of Core Track and use **Override** option to change the logic. Overrides as well as Business hours have been preconfigured for you. Now we need to apply it on your **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Bussiness_Hours">Your_Attendee_ID</span>_Bussiness_Hours<span class="copy" title="Click to copy!"></span></span>** entity. Open **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Bussiness_Hours** in **Control Hub**, scroll down to Additional Settings and select **Overrides_Hours** from Override dropdown list. Then click Save.
-    
-    !!! Note
-        Override Hours entity overwrites Working Hours and set to duration of current Cisco Live lab 
-
-    ![Profiles](../graphics/Lab1/12-Overrides_Config.gif)
-
-6. Make a new call to be redirected to flow ***$[0].goToFlow*** where the following message can be heard: **"Thanks you for call. You are now on Error Handling flow and will be redirected to Global Support line in a moment. Good bye."**
-
-7. Now we need to revert the configuration we made in Step 1. Open **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Bussiness_Hours** in **Control Hub** in **Control Hub**, scroll down to **Additional Settings** and select **None** from Override dropdown list. Then click **Save**.
-
-    ![Profiles](../graphics/Lab1/13-Revert_Overrides_Config.gif)
+4. Click on **Function** step and check if Modified Variables contains `**personalizedMessage**` built by your function.
 
 
-<p style="text-align:center"><strong>Congratulations, you have succesfully completed Routing Facilitation mission! 🎉🎉 </strong></p>
+<p style="text-align:center"><strong>Congratulations, you have succesfully completed Function mission! 🎉🎉 </strong></p>
