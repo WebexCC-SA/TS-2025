@@ -53,25 +53,22 @@ Your mission is to:
 
 5. Answer the call on Agent Desktop and use the provided script to simulate an agent/customer conversation (minimum 30 seconds).
 
-<!-- md:option type:note -->
-
+    <!-- md:option type:note -->
+    
     !!! note "Call Drop Summary Script"
-        **Agent**: Good morning, thank you for calling Airway Express. My name is Michelle. How can I assist you today?
+        **Agent**: Good morning, thank you for calling Airway Express. My name is Michelle. How can I assist you today?</br>
+        **You**: Hi Michelle, I'm having an issue trying to make an adjustment to a flight I have with you. I booked a flight from Amsterdam to London, but now I need to add a leg to go from London to New York a couple of days later. I just can't seem to do it through the website.</br>
+        **Agent**: I'm sorry to hear you're experiencing issues with our app. I can definitely help you with that. Could I have your flight confirmation number to start with, please?</br>
+        **You**: <..Silence..></br>
+        **Agent**: Hello, hello, hello</br>
 
-        **Customer**: Hi Michelle, I'm having an issue trying to make an adjustment to a flight I have with you. I booked a flight from Amsterdam to London, but now I need to add a leg to go from London to New York a couple of days later. I just can't seem to do it through the website.
-
-        **Agent**: I'm sorry to hear you're experiencing issues with our app. I can definitely help you with that. Could I have your flight confirmation number to start with, please?
-
-        **Customer**: <..Silence..>
-
-        **Agent**: Hello, hello, hello
 
 6. From the Agent Call Controls, transfer the call to transfer call to the Queue **`Q_CallDrop`**. Click the “Queue” radio button to search for this Queue.
 
 7. **Wait for the call to timeout and disconnect. This simulates an accidental call drop.**
 
     !!! Note
-        Since the call drop must be system initiated, Queue Q_CallDrop has been pre-configured with a maximum time in queue of 10 seconds (pictured in screenshot from Control Hub). Wait in the queue for about 10 seconds for the system to drop the call "automatically". 
+        Since the call drop must be system initiated, the queue **Q_CallDrop** has been pre-configured with a maximum time in queue of 10 seconds (pictured on screenshot from Control Hub). Wait in the queue for about 10 seconds for the system to drop the call "automatically". 
     
     ![Profiles](../graphics/Lab2/CallDropSum_DummyQueue.png)
 
