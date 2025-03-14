@@ -166,7 +166,7 @@ Your mission is to:
     >
     > This script dynamically generates a personalized message for customers based on their account details. In our lab it is a Channel Support Number assigned to you. It is used within Webex Contact Center (WxCC) Flow Designer to enhance customer interactions.
     > 
-    > ## How It Works:
+    > 1. How It Works:
     > Retrieves input variables from the Flow:
     > 
     >> `lastPurchase` → Date of the last purchase (e.g., `"17-03-2025"`).
@@ -174,13 +174,13 @@ Your mission is to:
     >> `pendingServiceRequest` → Details of any unresolved service request (e.g., `"Network issue"`).
     >> `resolutionDate` → Expected resolution date of the service request (e.g., `"20-03-2025"`).
     > 
-    > ## Processes and formats the data:
+    > 2. Processes and formats the data:
     >
     >> Converts `lastPurchase` and `resolutionDate` from `"DD-MM-YYYY"` format into a more readable format (`March 17, 2025`).
     >>
     >> Ensures `outstandingBalance` is a valid number and avoids errors if it’s missing or invalid.
     >
-    > ## Generates a customer-friendly message:
+    > 3. Generates a customer-friendly message:
     >
     >> If the customer made a purchase, the date is included.
     >>
@@ -190,7 +190,7 @@ Your mission is to:
     >>
     >> If no pending issues exist, it confirms that everything is fine.
     >
-    > ## Returns the message to be used in the Flow:
+    > 4. Returns the message to be used in the Flow:
     >
     >> The script outputs `personalizedMessage`, which can be read out in an IVR or displayed to an agent.
     >>
@@ -210,6 +210,8 @@ Your mission is to:
 
 8. Click on **Publish Function** and again click **Publish Function** in pop up window.
 
+    ![Profiles](../graphics/APIFunction/API_Function4.gif)
+
 ---
 
 ## Building Flow
@@ -218,9 +220,12 @@ Your mission is to:
 
 2. Select **Start Fresh** then enter flow name **<span class="attendee-id-container">FunctionFlow_<span class="attendee-id-placeholder" data-prefix="FunctionFlow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**. Click on **Create Flow**.
 
+    ![Profiles](../graphics/APIFunction/API_Function5.gif)
+
+
 3. Add these flow variables:
   
-       - Last purchase date variable:
+    - Last purchase date variable:
     
       >
       > Name: **lastPurchase**<span class="copy-static" data-copy-text="lastPurchase"><span class="copy" title="Click to copy!"></span></span>
@@ -256,6 +261,26 @@ Your mission is to:
       >
       > Default Value: *empty*
 
+
+    - HTTP Response variable:
+    
+      >
+      > Name: **HTTPResponse**<span class="copy-static" data-copy-text="HTTPResponse"><span class="copy" title="Click to copy!"></span></span>
+      >
+      > Type: **String**
+      >
+      > Default Value: *empty*
+
+    - Personalized message variable:
+    
+      >
+      > Name: **personalizedMessage**<span class="copy-static" data-copy-text="personalizedMessage"><span class="copy" title="Click to copy!"></span></span>
+      >
+      > Type: **String**
+      >
+      > Default Value: *empty*
+
+    ![Profiles](../graphics/APIFunction/API_Function6.gif)
 
 6. Select **FetchFlowSettings** HTTP Node and paste your GET request in Request URL field by replacing a templated one.
     ***https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={{NewPhoneContact.DNIS | slice(2) }}***<span class="copy-static" data-copy-text="https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={{NewPhoneContact.DNIS | slice(2) }}"><span class="copy" title="Click to copy!"></span></span>
