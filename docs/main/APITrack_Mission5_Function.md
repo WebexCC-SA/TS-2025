@@ -368,7 +368,7 @@ Your mission is to:
 
     ![Profiles](../graphics/APIFunction/API_Function8.gif)
 
-5. Switch to **Functions** tab in the left menu. Then drag **<span class="attendee-id-container">FunctionFlow_<span class="attendee-id-placeholder" data-prefix="FunctionFlow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** node to the canvas.
+5. Switch to **Functions** tab in the left menu. Then drag **<span class="attendee-id-container">Function_<span class="attendee-id-placeholder" data-prefix="Function_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** node to the canvas.
 
     >
     > Connect **HTTP_Response** to this node
@@ -431,13 +431,17 @@ Your mission is to:
 
 1. Open your Webex App and dial the Support Number provided to you, which is configured in your **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Channel** configuration.
 
-   ![profiles](../graphics/Lab1/WxApp_Test.gif)
+    ![profiles](../graphics/Lab1/WxApp_Test.gif)
 
 2. Verify if you hear a message build inside your function.
 
 3. Switch to Flow Designer and click Debug tab at the bottom and select last interaction (first in the list)
 
-4. Click on **Function** step and check if Modified Variables contains `**personalizedMessage**` built by your function.
+4. Click on **GET_HTTPRequest** and on the right hand side window scoll to the bottom. Check if **Modified Variables** have values assigned.
+
+5. Click on **HTTP_Response** to see full HTTP response body in **Modified Variables**.
+
+6. Click on **Function** step and check if Modified Variables contains `**personalizedMessage**` built by your function.
 
 
 <p style="text-align:center"><strong>Congratulations, you have succesfully completed Function mission! 🎉🎉 </strong></p>
