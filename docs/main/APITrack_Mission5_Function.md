@@ -282,10 +282,7 @@ Your mission is to:
 
     ![Profiles](../graphics/APIFunction/API_Function6.gif)
 
-6. Select **FetchFlowSettings** HTTP Node and paste your GET request in Request URL field by replacing a templated one.
-    ***https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={{NewPhoneContact.DNIS | slice(2) }}***<span class="copy-static" data-copy-text="https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={{NewPhoneContact.DNIS | slice(2) }}"><span class="copy" title="Click to copy!"></span></span>
 
- 
     > **<details><summary>**Test your API Source**<span style="color: orange;">[Optional]</span></summary>**
     > 
     > 1. Test your API resource. **https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={DNIS}**<span class="copy-static" data-copy-text="https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={DNIS}"><span class="copy" title="Click to copy!"></span></span>
@@ -310,16 +307,14 @@ Your mission is to:
     > </details>
 
 
-
-
-6. Add an **HTTP Request** node for our query. We are going to fetch Outbound Channel/Entry Point ID and custom ANI. Remember we used the same Cisco Worldwide Support contact number in Mission 3 of Fundamental labs.
+6. Add an **HTTP Request** node. We are going to fetch data and write it into our new created variables `lastPurchase`, `pendingServiceRequest`, `resolutionDate` and `outstandingBalance`.
     
     >
-    > Connect **WantCallback** Option 3 to this HTTP node
+    > Connect **NewPhoneContact** Option 3 to this HTTP node
     >
     > We will connct **HTTP Request** node in next step
     >
-    > Activity Name: **GET_CBID**<span class="copy-static" data-copy-text="GET_CBID"><span class="copy" title="Click to copy!"></span></span>
+    > Activity Name: **GET_HTTPRequest**<span class="copy-static" data-copy-text="GET_HTTPRequest"><span class="copy" title="Click to copy!"></span></span>
     >
     > Use Authenticated Endpoint: **Off**
     >
@@ -333,38 +328,50 @@ Your mission is to:
     >
     > Content Type: **JSON** 
     >
-    > Output Variable: **outdialcbid**<span class="copy-static" data-copy-text="outdialcbid"><span class="copy" title="Click to copy!"></span></span>
+    > Output Variable: **`pendingServiceRequest`**<span class="copy-static" data-copy-text="pendingServiceRequest"><span class="copy" title="Click to copy!"></span></span>
     >
-    > Path Expression: **$[0].outboundcallbackep**<span class="copy-static" data-copy-text="$[0].outboundcallbackep"><span class="copy" title="Click to copy!"></span></span>
+    > Path Expression: **`$[0].pendingServiceReques`t**<span class="copy-static" data-copy-text="$[0].pendingServiceRequest"><span class="copy" title="Click to copy!"></span></span>
     >
     > Click **Add New**
     >
-    > Output Variable: **customani**<span class="copy-static" data-copy-text="customani"><span class="copy" title="Click to copy!"></span></span>
+    > Output Variable: **`lastPurchase`**<span class="copy-static" data-copy-text="lastPurchase"><span class="copy" title="Click to copy!"></span></span>
     >
-    > Path Expression: **$[0].tacnumber**<span class="copy-static" data-copy-text="$[0].tacnumber"><span class="copy" title="Click to copy!"></span></span>
+    > Path Expression: **`$[0].lastPurchase`r**<span class="copy-static" data-copy-text="$[0].lastPurchase"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > Click **Add New**
+    >
+    > Output Variable: **`outstandingBalance`**<span class="copy-static" data-copy-text="outstandingBalance"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > Path Expression: **`$[0].outstandingBalance`r**<span class="copy-static" data-copy-text="$[0].outstandingBalance"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > Click **Add New**
+    >
+    > Output Variable: **`resolutionDate`**<span class="copy-static" data-copy-text="resolutionDate"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > Path Expression: **`$[0].resolutionDate`r**<span class="copy-static" data-copy-text="$[0].resolutionDate"><span class="copy" title="Click to copy!"></span></span>
 
 
+4. Add **Set Variable** node
+    
+    >
+    > Activity Label: **HTTP_Response**<span class="copy-static" data-copy-text="HTTP_Response"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > Connect **GET_HTTPRequest** to this node
+    >
+    > We will connct **Set Variable** node in next step
+    >
+    > Variable: **HTTPResponse**<span class="copy-static" data-copy-text="HTTPResponse"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > Set To Variable: **GET_HTTPRequest.httpResponseBody**<span class="copy-static" data-copy-text="GET_HTTPRequest.httpResponseBody"><span class="copy" title="Click to copy!"></span></span>
+    >
 
 
+5. Switch to **Functions** in the left menu. Then drag **<span class="attendee-id-container">FunctionFlow_<span class="attendee-id-placeholder" data-prefix="FunctionFlow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** node to the canvas.
+    >
+    > Connect **GET_HTTPRequest** to this node
+    >
+    > We will connct **Set Variable** node in next step
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-7. In the same node, under Parsing Settings add **[0]**<span class="copy-static" data-copy-text="[0]"><span class="copy" title="Click to copy!"></span></span> after **$** sign. This needs to be done due to output structure of API response. 
- 
-    ![Profiles](../graphics/Lab2/BM2-9-10-GETAPI_Config.gif)
 
 8. Open a **Queue** Node and set **Fallback Queue** to **CCBU_Fallback_Queue**. That is needed to make sure the call will find an end queue in case API GET call fails.
 
