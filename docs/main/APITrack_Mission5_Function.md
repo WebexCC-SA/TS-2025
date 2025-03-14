@@ -9,7 +9,7 @@ icon: material/medal
 
 
 ## Story 
-The primary objective of this new feature is to enhance nodes activities to include a dynamic variable-based selection option to make your flow smaller and simpler to adjust. You will learn how to use **Dynamic Variables** in multiple nodes including **GoTo**, **Business Hours**, **Queue** and other nodes. 
+In this mission, you will use a **Function Node** in WxCC to retrieve customer data from an external database and generate a personalized message using JavaScript. This ensures callers receive real-time updates on their last purchase, outstanding balance, and service requests without agent intervention.
 
 ## Call Flow Overview
 
@@ -197,7 +197,7 @@ Your mission is to:
     >
     ></details>
 
-7. Perform a test to see how you script preforms by clicking on **Test** pannel below the editor. Provide following date into respective fields. Then click **Test** button.
+6. Perform a test to see how you script preforms by clicking on **Test** pannel below the editor. Provide following date into respective fields. Then click **Test** button.
 
     > `lastPurchase`: **17-03-2025**<span class="copy-static" data-copy-text="17-03-2025"><span class="copy" title="Click to copy!"></span></span>
     >
@@ -208,7 +208,7 @@ Your mission is to:
     > `outstandingBalance`: **529.51**<span class="copy-static" data-copy-text="529.51"><span class="copy" title="Click to copy!"></span></span>
     >
 
-8. Click on **Publish Function** and again click **Publish Function** in pop up window.
+7. Click on **Publish Function** and again click **Publish Function** in pop up window.
 
     ![Profiles](../graphics/APIFunction/API_Function4.gif)
 
@@ -307,7 +307,7 @@ Your mission is to:
     > </details>
 
 
-6. Add an **HTTP Request** node. We are going to fetch data and write it into our new created variables `lastPurchase`, `pendingServiceRequest`, `resolutionDate` and `outstandingBalance`.
+4. Add an **HTTP Request** node. We are going to fetch data and write it into our new created variables `lastPurchase`, `pendingServiceRequest`, `resolutionDate` and `outstandingBalance`.
     
     >
     > Connect **NewPhoneContact** to this HTTP node
@@ -352,7 +352,7 @@ Your mission is to:
 
     ![Profiles](../graphics/APIFunction/API_Function7.gif)
 
-4. Add **Set Variable** node
+5. Add **Set Variable** node
     
     >
     > Activity Label: **HTTP_Response**<span class="copy-static" data-copy-text="HTTP_Response"><span class="copy" title="Click to copy!"></span></span>
@@ -368,7 +368,7 @@ Your mission is to:
 
     ![Profiles](../graphics/APIFunction/API_Function8.gif)
 
-5. Switch to **Functions** tab in the left menu. Then drag **<span class="attendee-id-container">Function_<span class="attendee-id-placeholder" data-prefix="Function_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** node to the canvas.
+6. Switch to **Functions** tab in the left menu. Then drag **<span class="attendee-id-container">Function_<span class="attendee-id-placeholder" data-prefix="Function_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** node to the canvas.
 
     >
     > Connect **HTTP_Response** to this node
@@ -387,7 +387,7 @@ Your mission is to:
 
     ![Profiles](../graphics/APIFunction/API_Function9.gif)
 
-6. Switch to **Activity** tab in the left menu. Add **Play Message** and **Disconnect Contact** nodes 
+7. Switch to **Activity** tab in the left menu. Add **Play Message** and **Disconnect Contact** nodes 
     
     >
     > Connect the **Function** node edge to this **Play Message** node
@@ -403,8 +403,9 @@ Your mission is to:
     > Text-to-Speech Message: **{{personalizedMessage}}**<span class="copy-static" data-copy-text="{{personalizedMessage}}"><span class="copy" title="Click to copy!"></span></span>
     >
     > Connect the **Play Message** node edge to this **Disconnect Contact** node
+</br>
 
-7.  Publish your flow
+8.  Publish your flow
 
     > Turn on Validation at the bottom right corner of the flow builder
     >
@@ -417,8 +418,9 @@ Your mission is to:
     > Click **Publish** Flow
 
     ![Profiles](../graphics/APIFunction/API_Function10.gif)
+</br>
 
-12. Map your flow to your inbound channel
+9. Map your flow to your inbound channel
     
     > Navigate to Control Hub > Contact Center > Channels
     >
