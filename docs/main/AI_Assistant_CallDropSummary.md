@@ -5,7 +5,7 @@ icon: material/medal
 
 
 
-# Mission 4: AI Assistant - Call Drop Summary!!!!!
+# Mission 4: AI Assistant - Call Drop Summary
 
 ## Story
 
