@@ -310,7 +310,7 @@ Your mission is to:
 6. Add an **HTTP Request** node. We are going to fetch data and write it into our new created variables `lastPurchase`, `pendingServiceRequest`, `resolutionDate` and `outstandingBalance`.
     
     >
-    > Connect **NewPhoneContact** Option 3 to this HTTP node
+    > Connect **NewPhoneContact** to this HTTP node
     >
     > We will connct **HTTP Request** node in next step
     >
@@ -330,25 +330,25 @@ Your mission is to:
     >
     > Output Variable: **`pendingServiceRequest`**<span class="copy-static" data-copy-text="pendingServiceRequest"><span class="copy" title="Click to copy!"></span></span>
     >
-    > Path Expression: **`$[0].pendingServiceReques`t**<span class="copy-static" data-copy-text="$[0].pendingServiceRequest"><span class="copy" title="Click to copy!"></span></span>
+    > Path Expression: **`$[0].pendingServiceRequest`**<span class="copy-static" data-copy-text="$[0].pendingServiceRequest"><span class="copy" title="Click to copy!"></span></span>
     >
     > Click **Add New**
     >
     > Output Variable: **`lastPurchase`**<span class="copy-static" data-copy-text="lastPurchase"><span class="copy" title="Click to copy!"></span></span>
     >
-    > Path Expression: **`$[0].lastPurchase`r**<span class="copy-static" data-copy-text="$[0].lastPurchase"><span class="copy" title="Click to copy!"></span></span>
+    > Path Expression: **`$[0].lastPurchase`**<span class="copy-static" data-copy-text="$[0].lastPurchase"><span class="copy" title="Click to copy!"></span></span>
     >
     > Click **Add New**
     >
     > Output Variable: **`outstandingBalance`**<span class="copy-static" data-copy-text="outstandingBalance"><span class="copy" title="Click to copy!"></span></span>
     >
-    > Path Expression: **`$[0].outstandingBalance`r**<span class="copy-static" data-copy-text="$[0].outstandingBalance"><span class="copy" title="Click to copy!"></span></span>
+    > Path Expression: **`$[0].outstandingBalance`**<span class="copy-static" data-copy-text="$[0].outstandingBalance"><span class="copy" title="Click to copy!"></span></span>
     >
     > Click **Add New**
     >
     > Output Variable: **`resolutionDate`**<span class="copy-static" data-copy-text="resolutionDate"><span class="copy" title="Click to copy!"></span></span>
     >
-    > Path Expression: **`$[0].resolutionDate`r**<span class="copy-static" data-copy-text="$[0].resolutionDate"><span class="copy" title="Click to copy!"></span></span>
+    > Path Expression: **`$[0].resolutionDate`**<span class="copy-static" data-copy-text="$[0].resolutionDate"><span class="copy" title="Click to copy!"></span></span>
 
 
 4. Add **Set Variable** node
