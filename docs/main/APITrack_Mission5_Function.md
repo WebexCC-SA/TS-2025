@@ -5,7 +5,7 @@ icon: material/medal
 
 
 
-# Mission 2: Routing facilitation
+# Mission 5: Personalized Customer Notification with Functions
 
 
 ## Story 
@@ -37,7 +37,7 @@ Your mission is to:
 > </details>
 
 
-## Build
+## Building Function 
 
 1. Switch to Control Hub, then navigate to **Functions**, click on **Create a function** then select **Create a function** from drop down list. 
 
@@ -100,72 +100,6 @@ Your mission is to:
 
 5. Clear the editor from the default code and paste the following JavaScript code into Function editor.
 
-    <div class="code-container">
-      <pre id="js-snippet">
-      <code>
-    export const handle = async (request, response) => {
-        // Retrieve input variables (all as strings)
-        var lastPurchase = request.inputs.lastPurchase;  // e.g., '17-03-2025'
-        var outstandingBalance = request.inputs.outstandingBalance;  // e.g., '120.50'
-        var pendingServiceRequest = request.inputs.pendingServiceRequest;  // e.g., 'Network issue'
-        var resolutionDate = request.inputs.resolutionDate;  // e.g., '20-03-2025'
-    
-        // Convert outstandingBalance to a number safely
-        let balanceAmount = parseFloat(outstandingBalance);
-        if (isNaN(balanceAmount)) {
-            balanceAmount = 0;  // Default to 0 if conversion fails
-        }
-    
-        // Function to convert 'DD-MM-YYYY' to a proper Date object
-        function parseDate(dateString) {
-            if (!dateString) return null;
-            const parts = dateString.split('-'); // Split "17-03-2025" into ["17", "03", "2025"]
-            if (parts.length !== 3) return null; // Invalid format
-    
-            const [day, month, year] = parts.map(num => parseInt(num, 10));
-            return new Date(year, month - 1, day); // Month is 0-based in JS Dates
-        }
-    
-        // Format the date to a readable string (e.g., "March 17, 2025")
-        function formatDate(date) {
-            return date ? date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
-        }
-    
-        // Parse and format dates
-        let formattedLastPurchase = formatDate(parseDate(lastPurchase));
-        let formattedResolutionDate = formatDate(parseDate(resolutionDate));
-    
-        // Generate the personalized message
-        let message = 'Hello, we have some information about your account:';
-    
-        if (formattedLastPurchase) {
-            message += ` Your last purchase was on ${formattedLastPurchase}.`;
-        }
-        if (balanceAmount > 0) {
-            message += ` You have an outstanding balance of $${balanceAmount.toFixed(2)}.`;
-        }
-        if (pendingServiceRequest) {
-            message += ` We also have a pending service request: ${pendingServiceRequest}`;
-            if (formattedResolutionDate) {
-                message += `, resolution by ${formattedResolutionDate}.`;
-            } else {
-                message += `.`;
-            }
-        } else {
-            message += ' There are no pending service requests at the moment.';
-        }
-    
-        // Return the generated message
-        response.data = { 'personalizedMessage': message };
-    
-        return response;
-        };
-       
-       </code>
-       </pre>
-       <button onclick="copyToClipboard()">Copy Code</button>
-    </div>
-
     ``` JSON
      export const handle = async (request, response) => {
         // Retrieve input variables (all as strings)
@@ -226,7 +160,6 @@ Your mission is to:
         };
     ```
 
-
     ![Profiles](../graphics/APIFunction/API_Function3.gif)
 
     > **<details><summary>Good to know: Script Breakdown<span style="color: orange;">[Optional]</span></summary>**
@@ -264,27 +197,65 @@ Your mission is to:
     >
     ></details>
 
+7. Perform a test to see how you script preforms by clicking on **Test** pannel below the editor. Provide following date into respective fields. Then click **Test** button.
 
-1. Switch to Control Hub, then navigate to **Flows**, click on **Manage Flows** dropdown list and select **Create Flows**
+    > `lastPurchase`: **17-03-2025**<span class="copy-static" data-copy-text="17-03-2025"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > `pendingServiceRequest`: **Network issue on Amsterdam location**<span class="copy-static" data-copy-text="Network issue on Amsterdam location"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > `resolutionDate`: **20-03-2025**<span class="copy-static" data-copy-text="20-03-2025"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > `outstandingBalance`: **529.51**<span class="copy-static" data-copy-text="529.51"><span class="copy" title="Click to copy!"></span></span>
+    >
 
-2. New Tab will be opened. Navigate to **Flow Templates**
+8. Click on **Publish Function** and again click **Publish Function** in pop up window.
 
-3. Choose **Dynamic Variable Support** and click **Next**. You can open **View Details** and to see observe flow structure and read flow description.
+---
 
-4. Name you flow as **<span class="attendee-id-container">DynamicVariables_<span class="attendee-id-placeholder" data-prefix="DynamicVariables_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**. Then click on Create Flow.
+## Building Flow
 
-    ![Profiles](../graphics/Lab2/BM2_2-7_DynFlowCreate.gif)
+1. Switch to Control Hub, then navigate to **Flows**, click on **Manage Flows** then select **Create Flows** from drop down list. 
 
-5. Observe preconfigured nodes and flow variables. If you have questions please reach out to lab proctor.
+2. Select **Start Fresh** then enter flow name **<span class="attendee-id-container">FunctionFlow_<span class="attendee-id-placeholder" data-prefix="FunctionFlow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**. Click on **Create Flow**.
+
+3. Add these flow variables:
+  
+       - Last purchase date variable:
     
-    - **FetchFlowSettings** node is used to access external database over API and parse the result by writing response result into respective Flow Variables which have been preconfigured for you already.
-    - **SetVariable_mwn** node writes complete API response into debug variable so you could see the complete API call result in Debug tool. It's been taken from **FetchFlowSettings.httpResponseBody** output variable of **FetchFlowSettings** node
-    - All **Play Message** and **Play Music** nodes have been preconfigured to play TTS messages taken from respective API response
-    - **BusinessHours_os2** node set to bussinesshours variable which is your business hour entity **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Bussiness_Hours**
-    - **QueueContact_a62** node set to queue variable which is your queue entity **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Queue**
-    - Some **GoTo** nodes are configured to use variables and some have statice values. We will adjust them while going through further steps. 
+      >
+      > Name: **lastPurchase**<span class="copy-static" data-copy-text="lastPurchase"><span class="copy" title="Click to copy!"></span></span>
+      >
+      > Type: **String**
+      >
+      > Default Value: *empty*
 
-    ![Profiles](../graphics/Lab2/BM2-7-ObserveFlow.gif)
+    - Customer pending request variable:
+    
+      >
+      > Name: **pendingServiceRequest**<span class="copy-static" data-copy-text="pendingServiceRequest"><span class="copy" title="Click to copy!"></span></span>
+      >
+      > Type: **String**
+      >
+      > Default Value: *empty*
+
+    - Expected resolution date variable:
+    
+      >
+      > Name: **resolutionDate**<span class="copy-static" data-copy-text="resolutionDate"><span class="copy" title="Click to copy!"></span></span>
+      >
+      > Type: **String**
+      >
+      > Default Value: *empty*
+
+    - Outstanding account balance variable:
+    
+      >
+      > Name: **outstandingBalance**<span class="copy-static" data-copy-text="outstandingBalance"><span class="copy" title="Click to copy!"></span></span>
+      >
+      > Type: **String**
+      >
+      > Default Value: *empty*
+
 
 6. Select **FetchFlowSettings** HTTP Node and paste your GET request in Request URL field by replacing a templated one.
     ***https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={{NewPhoneContact.DNIS | slice(2) }}***<span class="copy-static" data-copy-text="https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={{NewPhoneContact.DNIS | slice(2) }}"><span class="copy" title="Click to copy!"></span></span>
@@ -312,6 +283,59 @@ Your mission is to:
     >
     > ![Profiles](../graphics/Lab2/BM2-9-10-JSONPath.gif)
     > </details>
+
+
+
+
+6. Add an **HTTP Request** node for our query. We are going to fetch Outbound Channel/Entry Point ID and custom ANI. Remember we used the same Cisco Worldwide Support contact number in Mission 3 of Fundamental labs.
+    
+    >
+    > Connect **WantCallback** Option 3 to this HTTP node
+    >
+    > We will connct **HTTP Request** node in next step
+    >
+    > Activity Name: **GET_CBID**<span class="copy-static" data-copy-text="GET_CBID"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > Use Authenticated Endpoint: **Off**
+    >
+    > Requestt URL: ***https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={{NewPhoneContact.DNIS | slice(2) }}***<span class="copy-static" data-copy-text="https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={{NewPhoneContact.DNIS | slice(2) }}"><span class="copy" title="Click to copy!"></span></span>
+    > 
+    > Method: **GET**
+    > 
+    > Content Type: **Application/JSON**
+    >
+    > **Parsing Settings:**
+    >
+    > Content Type: **JSON** 
+    >
+    > Output Variable: **outdialcbid**<span class="copy-static" data-copy-text="outdialcbid"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > Path Expression: **$[0].outboundcallbackep**<span class="copy-static" data-copy-text="$[0].outboundcallbackep"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > Click **Add New**
+    >
+    > Output Variable: **customani**<span class="copy-static" data-copy-text="customani"><span class="copy" title="Click to copy!"></span></span>
+    >
+    > Path Expression: **$[0].tacnumber**<span class="copy-static" data-copy-text="$[0].tacnumber"><span class="copy" title="Click to copy!"></span></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 7. In the same node, under Parsing Settings add **[0]**<span class="copy-static" data-copy-text="[0]"><span class="copy" title="Click to copy!"></span></span> after **$** sign. This needs to be done due to output structure of API response. 
  
