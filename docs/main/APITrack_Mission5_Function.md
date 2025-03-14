@@ -22,6 +22,7 @@ In this mission, you will use a **Function Node** in WxCC to retrieve customer d
 ## Mission Details
 
 Your mission is to:
+
 1. Create a function that retrieves input variables, processes them, and generates a customer-friendly message.</br>
 2. Create a new flow with the Function element.</br>
 3. Request data from an external database, parse it into flow variables, and pass them to your Function.</br>
@@ -45,7 +46,7 @@ Your mission is to:
 
     ![Profiles](../graphics/APIFunction/API_Function1.gif)
 
-3. Switch Read-Only mode from **Off** to **On** and add following variables by clicking **Add Input Variables**:
+3. Switch **Read-Only** mode from **Off** to **On** and add following variables by clicking **Add Input Variables**:
 
 
  
@@ -167,37 +168,36 @@ Your mission is to:
     > This script dynamically generates a personalized message for customers based on their account details. In our lab it is a Channel Support Number assigned to you. It is used within Webex Contact Center (WxCC) Flow Designer to enhance customer interactions.
     > 
     > 1. How It Works:
-    > Retrieves input variables from the Flow:
+    >    Retrieves input variables from the Flow:
     > 
-    > `lastPurchase` → Date of the last purchase (e.g., `"17-03-2025"`).
-    > `outstandingBalance` → The amount owed by the customer (e.g., `"120.50"`).
-    > `pendingServiceRequest` → Details of any unresolved service request (e.g., `"Network issue"`).
-    > `resolutionDate` → Expected resolution date of the service request (e.g., `"20-03-2025"`).
+    >   - `lastPurchase` → Date of the last purchase (e.g., `"17-03-2025"`).
+    >   - `outstandingBalance` → The amount owed by the customer (e.g., `"120.50"`).
+    >   - `pendingServiceRequest` → Details of any unresolved service request (e.g., `"Network issue"`).
+    >   - `resolutionDate` → Expected resolution date of the service request (e.g., `"20-03-2025"`).
     > 
     > 2. Processes and formats the data:
     >
-    > Converts `lastPurchase` and `resolutionDate` from `"DD-MM-YYYY"` format into a more readable format (`March 17, 2025`).
+    >   - Converts `lastPurchase` and `resolutionDate` from `"DD-MM-YYYY"` format into a more readable format (`March 17, 2025`).
     >
-    > Ensures `outstandingBalance` is a valid number and avoids errors if it’s missing or invalid.
+    >   - Ensures `outstandingBalance` is a valid number and avoids errors if it’s missing or invalid.
     >
     > 3. Generates a customer-friendly message:
     >
-    > If the customer made a purchase, the date is included.
-    >
-    > If an outstanding balance exists, the amount is shown.
-    >
-    > If there’s a pending service request, it’s mentioned, along with a resolution date (if available).
-    >
-    > If no pending issues exist, it confirms that everything is fine.
+    >   - If the customer made a purchase, the date is included.
+    >   
+    >   - If an outstanding balance exists, the amount is shown.
+    >   
+    >   - If there’s a pending service request, it’s mentioned, along with a resolution date (if available).
+    >   
+    >   - If no pending issues exist, it confirms that everything is fine.
     >
     > 4. Returns the message to be used in the Flow:
     >
-    > The script outputs `personalizedMessage`, which can be read out in an IVR or displayed to an agent.
-    >
+    >   - The script outputs `personalizedMessage`, which can be read out in an IVR or displayed to an agent.
     >
     ></details>
 
-6. Perform a test to see how you script preforms by clicking on **Test** pannel below the editor. Provide following date into respective fields. Then click **Test** button.
+6. Perform a test to see how you script preforms by clicking on **Test** pannel below the editor. Provide following data into respective fields. Then click **Test** button.
 
     > `lastPurchase`: **17-03-2025**<span class="copy-static" data-copy-text="17-03-2025"><span class="copy" title="Click to copy!"></span></span>
     >
