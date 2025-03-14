@@ -95,7 +95,7 @@ Your mission is to:
 
 4. Add output variable **personalizedMessage**<span class="copy-static" data-copy-text="personalizedMessage"><span class="copy" title="Click to copy!"></span></span> in **Output Variable Definition** field.
 
-    ![Profiles](../graphics/APIFunction/API_Function1.gif)
+    ![Profiles](../graphics/APIFunction/API_Function2.gif)
 
 
 5. Clear the editor from the default code and paste the following JavaScript code into Function editor.
@@ -165,6 +165,104 @@ Your mission is to:
        </pre>
        <button onclick="copyToClipboard()">Copy Code</button>
     </div>
+
+    ``` JSON
+     export const handle = async (request, response) => {
+        // Retrieve input variables (all as strings)
+        var lastPurchase = request.inputs.lastPurchase;  // e.g., '17-03-2025'
+        var outstandingBalance = request.inputs.outstandingBalance;  // e.g., '120.50'
+        var pendingServiceRequest = request.inputs.pendingServiceRequest;  // e.g., 'Network issue'
+        var resolutionDate = request.inputs.resolutionDate;  // e.g., '20-03-2025'
+    
+        // Convert outstandingBalance to a number safely
+        let balanceAmount = parseFloat(outstandingBalance);
+        if (isNaN(balanceAmount)) {
+            balanceAmount = 0;  // Default to 0 if conversion fails
+        }
+    
+        // Function to convert 'DD-MM-YYYY' to a proper Date object
+        function parseDate(dateString) {
+            if (!dateString) return null;
+            const parts = dateString.split('-'); // Split "17-03-2025" into ["17", "03", "2025"]
+            if (parts.length !== 3) return null; // Invalid format
+    
+            const [day, month, year] = parts.map(num => parseInt(num, 10));
+            return new Date(year, month - 1, day); // Month is 0-based in JS Dates
+        }
+    
+        // Format the date to a readable string (e.g., "March 17, 2025")
+        function formatDate(date) {
+            return date ? date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
+        }
+    
+        // Parse and format dates
+        let formattedLastPurchase = formatDate(parseDate(lastPurchase));
+        let formattedResolutionDate = formatDate(parseDate(resolutionDate));
+    
+        // Generate the personalized message
+        let message = 'Hello, we have some information about your account:';
+    
+        if (formattedLastPurchase) {
+            message += ` Your last purchase was on ${formattedLastPurchase}.`;
+        }
+        if (balanceAmount > 0) {
+            message += ` You have an outstanding balance of $${balanceAmount.toFixed(2)}.`;
+        }
+        if (pendingServiceRequest) {
+            message += ` We also have a pending service request: ${pendingServiceRequest}`;
+            if (formattedResolutionDate) {
+                message += `, resolution by ${formattedResolutionDate}.`;
+            } else {
+                message += `.`;
+            }
+        } else {
+            message += ' There are no pending service requests at the moment.';
+        }
+    
+        // Return the generated message
+        response.data = { 'personalizedMessage': message };
+    
+        return response;
+        };
+    ```
+
+
+    ![Profiles](../graphics/APIFunction/API_Function3.gif)
+
+    > **<details><summary>Good to know: Script Breakdown<span style="color: orange;">[Optional]</span></summary>**
+    >
+    > This script dynamically generates a personalized message for customers based on their account details. In our lab it is a Channel Support Number assigned to you. It is used within Webex Contact Center (WxCC) Flow Designer to enhance customer interactions.
+    > 
+    > ## How It Works:
+    > Retrieves input variables from the Flow:
+    > 
+    >> `lastPurchase` → Date of the last purchase (e.g., `"17-03-2025"`).
+    >> `outstandingBalance` → The amount owed by the customer (e.g., `"120.50"`).
+    >> `pendingServiceRequest` → Details of any unresolved service request (e.g., `"Network issue"`).
+    >> `resolutionDate` → Expected resolution date of the service request (e.g., `"20-03-2025"`).
+    > 
+    > ## Processes and formats the data:
+    >
+    >> Converts `lastPurchase` and `resolutionDate` from `"DD-MM-YYYY"` format into a more readable format (`March 17, 2025`).
+    >>
+    >> Ensures `outstandingBalance` is a valid number and avoids errors if it’s missing or invalid.
+    >
+    > ## Generates a customer-friendly message:
+    >
+    >> If the customer made a purchase, the date is included.
+    >>
+    >> If an outstanding balance exists, the amount is shown.
+    >>
+    >> If there’s a pending service request, it’s mentioned, along with a resolution date (if available).
+    >>
+    >> If no pending issues exist, it confirms that everything is fine.
+    >
+    > ## Returns the message to be used in the Flow:
+    >
+    >> The script outputs `personalizedMessage`, which can be read out in an IVR or displayed to an agent.
+    >>
+    >
+    ></details>
 
 
 1. Switch to Control Hub, then navigate to **Flows**, click on **Manage Flows** dropdown list and select **Create Flows**

@@ -119,7 +119,7 @@ nav:
             - "Mission 2: Routing facilitation": ./main/APITrack_Mission2.md 
             - "Mission 3: Last Agent Routing": ./main/APITrack_Mission3_AutoCSAT.md
             - "Mission 4: Routing Returning Callers": ./main/APITrack_Mission4.md
-            - "Mission 4: Personalized Customer Notification with Functions": ./main/APITrack_Mission5_Function.md
+            - "Mission 5: Personalized Customer Notification with Functions": ./main/APITrack_Mission5_Function.md
       - Conclusion: ./main/APITrack_Conclusion.md
   - CALLBACK TRACK:
       - Lab Guide:
