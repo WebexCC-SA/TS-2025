@@ -5,7 +5,7 @@ icon: material/medal
 
 
 
-# Mission 1: AI Autonomous Agent in Action <span style="color: blue;">(BONUS)</span></summary> 
+# Mission 1: AI Autonomous Agent in Action
 
 ## <span style="color: red;">**Disclaimer**</span></summary>
 Please note that the AI Agent is scheduled for General Availability (GA) in Q1 of the 2025 calendar year (CY25). This exercise is designed to provide you with an early glimpse and understanding of the feature's capabilities. We appreciate your participation and value your feedback as we refine this offering ahead of its official release.
@@ -28,7 +28,7 @@ The Autonomous AI Agent for performing actions can handle various tasks, includi
 
 ## Story
 
-As a visitor to Amsterdam, you want to quickly find restaurants offering various international cuisines in the city and easily figure out how to get to them from your current location at the RAI.
+As a visitor to Amsterdam, you want to quickly find restaurants offering various international cuisines in the city and easily figure out how to get to them from your current location at the Cisco Office in Amsterdam.
 
 ### Call Flow Overview
 
@@ -39,7 +39,7 @@ As a visitor to Amsterdam, you want to quickly find restaurants offering various
 ## Mission overview
 Your mission is to:
 
-1. Create a knowledge base (KB) and AI agent to provide answers about Amsterdam, including places to visit, restaurants, nightclubs, and directions from the current RAI Amsterdam Convention Center.</br>
+1. Create a knowledge base (KB) and AI agent to provide answers about Amsterdam, including places to visit, restaurants, nightclubs, and directions from the Cisco Office in Amsterdam.</br>
 2. Configure the AI agent with handoff functionality to transfer the conversation to a live agent when necessary.</br>
 
 ---
@@ -98,7 +98,7 @@ Your mission is to:
 
     ![Profiles](../graphics/Lab1/AITrack_AIAgentaMapKB.gif)
 
-14. Click on **Preview** to test your AI Agent and ask the following: **"I'm looking for an Italian restaurant close to RAI."**<span class="copy-static" title="Click to copy!" data-copy-text="I'm looking for an Italian restaurant close to RAI."><span class="copy"></span></span>
+14. Click on **Preview** to test your AI Agent and ask the following: **"I'm looking for an Italian restaurant close to Cisco Office in Amsterdam."**<span class="copy-static" title="Click to copy!" data-copy-text="I'm looking for an Italian restaurant close to Cisco Office in Amsterdam."><span class="copy"></span></span>
 
 ![Profiles](../graphics/Lab1/AITrack_AIAgentPreview.gif)
 
