@@ -103,7 +103,7 @@ Your mission is to:
     <div class="code-container">
       <pre id="js-snippet">
       <code>
-        export const handle = async (request, response) => {
+    export const handle = async (request, response) => {
         // Retrieve input variables (all as strings)
         var lastPurchase = request.inputs.lastPurchase;  // e.g., '17-03-2025'
         var outstandingBalance = request.inputs.outstandingBalance;  // e.g., '120.50'
@@ -160,7 +160,6 @@ Your mission is to:
     
         return response;
         };
-        ```
     </script>
 
 
