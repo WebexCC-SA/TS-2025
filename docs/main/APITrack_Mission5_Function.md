@@ -99,66 +99,69 @@ Your mission is to:
 
 5. Clear the editor from the default code and paste the following JavaScript code into Function editor.
 
- ```JavaScript
-    export const handle = async (request, response) => {
-    // Retrieve input variables (all as strings)
-    var lastPurchase = request.inputs.lastPurchase;  // e.g., '17-03-2025'
-    var outstandingBalance = request.inputs.outstandingBalance;  // e.g., '120.50'
-    var pendingServiceRequest = request.inputs.pendingServiceRequest;  // e.g., 'Network issue'
-    var resolutionDate = request.inputs.resolutionDate;  // e.g., '20-03-2025'
 
-    // Convert outstandingBalance to a number safely
-    let balanceAmount = parseFloat(outstandingBalance);
-    if (isNaN(balanceAmount)) {
-        balanceAmount = 0;  // Default to 0 if conversion fails
-    }
-
-    // Function to convert 'DD-MM-YYYY' to a proper Date object
-    function parseDate(dateString) {
-        if (!dateString) return null;
-        const parts = dateString.split('-'); // Split "17-03-2025" into ["17", "03", "2025"]
-        if (parts.length !== 3) return null; // Invalid format
-
-        const [day, month, year] = parts.map(num => parseInt(num, 10));
-        return new Date(year, month - 1, day); // Month is 0-based in JS Dates
-    }
-
-    // Format the date to a readable string (e.g., "March 17, 2025")
-    function formatDate(date) {
-        return date ? date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
-    }
-
-    // Parse and format dates
-    let formattedLastPurchase = formatDate(parseDate(lastPurchase));
-    let formattedResolutionDate = formatDate(parseDate(resolutionDate));
-
-    // Generate the personalized message
-    let message = 'Hello, we have some information about your account:';
-
-    if (formattedLastPurchase) {
-        message += ` Your last purchase was on ${formattedLastPurchase}.`;
-    }
-    if (balanceAmount > 0) {
-        message += ` You have an outstanding balance of $${balanceAmount.toFixed(2)}.`;
-    }
-    if (pendingServiceRequest) {
-        message += ` We also have a pending service request: ${pendingServiceRequest}`;
-        if (formattedResolutionDate) {
-            message += `, resolution by ${formattedResolutionDate}.`;
-        } else {
-            message += `.`;
+    <div class="code-container">
+      <pre id="js-snippet">
+      <code>
+        export const handle = async (request, response) => {
+        // Retrieve input variables (all as strings)
+        var lastPurchase = request.inputs.lastPurchase;  // e.g., '17-03-2025'
+        var outstandingBalance = request.inputs.outstandingBalance;  // e.g., '120.50'
+        var pendingServiceRequest = request.inputs.pendingServiceRequest;  // e.g., 'Network issue'
+        var resolutionDate = request.inputs.resolutionDate;  // e.g., '20-03-2025'
+    
+        // Convert outstandingBalance to a number safely
+        let balanceAmount = parseFloat(outstandingBalance);
+        if (isNaN(balanceAmount)) {
+            balanceAmount = 0;  // Default to 0 if conversion fails
         }
-    } else {
-        message += ' There are no pending service requests at the moment.';
-    }
-
-    // Return the generated message
-    response.data = { 'personalizedMessage': message };
-
-    return response;
-    };
-    ```
-
+    
+        // Function to convert 'DD-MM-YYYY' to a proper Date object
+        function parseDate(dateString) {
+            if (!dateString) return null;
+            const parts = dateString.split('-'); // Split "17-03-2025" into ["17", "03", "2025"]
+            if (parts.length !== 3) return null; // Invalid format
+    
+            const [day, month, year] = parts.map(num => parseInt(num, 10));
+            return new Date(year, month - 1, day); // Month is 0-based in JS Dates
+        }
+    
+        // Format the date to a readable string (e.g., "March 17, 2025")
+        function formatDate(date) {
+            return date ? date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : null;
+        }
+    
+        // Parse and format dates
+        let formattedLastPurchase = formatDate(parseDate(lastPurchase));
+        let formattedResolutionDate = formatDate(parseDate(resolutionDate));
+    
+        // Generate the personalized message
+        let message = 'Hello, we have some information about your account:';
+    
+        if (formattedLastPurchase) {
+            message += ` Your last purchase was on ${formattedLastPurchase}.`;
+        }
+        if (balanceAmount > 0) {
+            message += ` You have an outstanding balance of $${balanceAmount.toFixed(2)}.`;
+        }
+        if (pendingServiceRequest) {
+            message += ` We also have a pending service request: ${pendingServiceRequest}`;
+            if (formattedResolutionDate) {
+                message += `, resolution by ${formattedResolutionDate}.`;
+            } else {
+                message += `.`;
+            }
+        } else {
+            message += ' There are no pending service requests at the moment.';
+        }
+    
+        // Return the generated message
+        response.data = { 'personalizedMessage': message };
+    
+        return response;
+        };
+        ```
+    </script>
 
 
 1. Switch to Control Hub, then navigate to **Flows**, click on **Manage Flows** dropdown list and select **Create Flows**
