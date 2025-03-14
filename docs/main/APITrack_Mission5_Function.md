@@ -369,6 +369,7 @@ Your mission is to:
     ![Profiles](../graphics/APIFunction/API_Function8.gif)
 
 5. Switch to **Functions** tab in the left menu. Then drag **<span class="attendee-id-container">FunctionFlow_<span class="attendee-id-placeholder" data-prefix="FunctionFlow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** node to the canvas.
+
     >
     > Connect **HTTP_Response** to this node
     >
