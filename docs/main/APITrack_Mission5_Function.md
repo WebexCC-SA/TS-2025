@@ -97,8 +97,8 @@ Your mission is to:
 
     ![Profiles](../graphics/APIFunction/API_Function1.gif)
 
-5. Clear the editor from the default code and paste the following JavaScript code into Function editor.
 
+5. Clear the editor from the default code and paste the following JavaScript code into Function editor.
 
     <div class="code-container">
       <pre id="js-snippet">
@@ -160,7 +160,11 @@ Your mission is to:
     
         return response;
         };
-    </script>
+       
+       </code>
+       </pre>
+       <button onclick="copyToClipboard()">Copy Code</button>
+    </div>
 
 
 1. Switch to Control Hub, then navigate to **Flows**, click on **Manage Flows** dropdown list and select **Create Flows**
