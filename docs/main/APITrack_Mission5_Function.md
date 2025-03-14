@@ -169,31 +169,31 @@ Your mission is to:
     > 1. How It Works:
     > Retrieves input variables from the Flow:
     > 
-    >> `lastPurchase` → Date of the last purchase (e.g., `"17-03-2025"`).
-    >> `outstandingBalance` → The amount owed by the customer (e.g., `"120.50"`).
-    >> `pendingServiceRequest` → Details of any unresolved service request (e.g., `"Network issue"`).
-    >> `resolutionDate` → Expected resolution date of the service request (e.g., `"20-03-2025"`).
+    > `lastPurchase` → Date of the last purchase (e.g., `"17-03-2025"`).
+    > `outstandingBalance` → The amount owed by the customer (e.g., `"120.50"`).
+    > `pendingServiceRequest` → Details of any unresolved service request (e.g., `"Network issue"`).
+    > `resolutionDate` → Expected resolution date of the service request (e.g., `"20-03-2025"`).
     > 
     > 2. Processes and formats the data:
     >
-    >> Converts `lastPurchase` and `resolutionDate` from `"DD-MM-YYYY"` format into a more readable format (`March 17, 2025`).
-    >>
-    >> Ensures `outstandingBalance` is a valid number and avoids errors if it’s missing or invalid.
+    > Converts `lastPurchase` and `resolutionDate` from `"DD-MM-YYYY"` format into a more readable format (`March 17, 2025`).
+    >
+    > Ensures `outstandingBalance` is a valid number and avoids errors if it’s missing or invalid.
     >
     > 3. Generates a customer-friendly message:
     >
-    >> If the customer made a purchase, the date is included.
-    >>
-    >> If an outstanding balance exists, the amount is shown.
-    >>
-    >> If there’s a pending service request, it’s mentioned, along with a resolution date (if available).
-    >>
-    >> If no pending issues exist, it confirms that everything is fine.
+    > If the customer made a purchase, the date is included.
+    >
+    > If an outstanding balance exists, the amount is shown.
+    >
+    > If there’s a pending service request, it’s mentioned, along with a resolution date (if available).
+    >
+    > If no pending issues exist, it confirms that everything is fine.
     >
     > 4. Returns the message to be used in the Flow:
     >
-    >> The script outputs `personalizedMessage`, which can be read out in an IVR or displayed to an agent.
-    >>
+    > The script outputs `personalizedMessage`, which can be read out in an IVR or displayed to an agent.
+    >
     >
     ></details>
 
@@ -385,6 +385,8 @@ Your mission is to:
     >>
     >> Path Expression **`$.personalizedMessage`**<span class="copy-static" data-copy-text="personalizedMessage"><span class="copy" title="Click to copy!"></span></span>
 
+    ![Profiles](../graphics/APIFunction/API_Function9.gif)
+
 6. Switch to **Activity** tab in the left menu. Add **Play Message** and **Disconnect Contact** nodes 
     
     >
@@ -414,6 +416,8 @@ Your mission is to:
     >
     > Click **Publish** Flow
 
+    ![Profiles](../graphics/APIFunction/API_Function10.gif)
+
 12. Map your flow to your inbound channel
     
     > Navigate to Control Hub > Contact Center > Channels
@@ -426,6 +430,7 @@ Your mission is to:
     >
     > Click **Save** in the lower right corner of the screen
 
+    ![Profiles](../graphics/APIFunction/API_Function11.gif)
 
 ## Testing
 
@@ -433,7 +438,7 @@ Your mission is to:
 
     ![profiles](../graphics/Lab1/WxApp_Test.gif)
 
-2. Verify if you hear a message build inside your function.
+2. Verify if you hear a message built inside your function.
 
 3. Switch to Flow Designer and click Debug tab at the bottom and select last interaction (first in the list)
 
@@ -443,5 +448,6 @@ Your mission is to:
 
 6. Click on **Function** step and check if Modified Variables contains `**personalizedMessage**` built by your function.
 
+    ![Profiles](../graphics/APIFunction/API_Function12.gif)
 
 <p style="text-align:center"><strong>Congratulations, you have succesfully completed Function mission! 🎉🎉 </strong></p>
