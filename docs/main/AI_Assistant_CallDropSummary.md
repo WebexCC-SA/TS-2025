@@ -65,6 +65,9 @@ Your mission is to:
 
 6. From the Agent Call Controls, transfer the call to transfer call to the Queue **Q_CallDrop**. Click the “Queue” radio button to search for this Queue.
 
+
+  ![Profiles](../graphics/AI_Track/CallDropSum_Transfer.gif)
+
 7. **Wait for the call to timeout and disconnect. This simulates an accidental call drop.**
 
     !!! Note

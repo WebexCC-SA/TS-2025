@@ -83,7 +83,7 @@ Your mission is to:
     >
     > 7. In **JSONPath** box copy and paste one of the path expression from **FetchFlowSettings** to verify your results.
     >
-    > ![Profiles](../graphics/Lab2/BM2-9-10-JSONPath.gif)
+    > ![Profiles](../graphics/Lab2/BM2-10-JSONPath.gif)
     > </details>
 
 7. In the same node, under Parsing Settings add **[0]**<span class="copy-static" data-copy-text="[0]"><span class="copy" title="Click to copy!"></span></span> after **$** sign. This needs to be done due to output structure of API response. 

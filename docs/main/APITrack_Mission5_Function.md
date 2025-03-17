@@ -167,34 +167,23 @@ Your mission is to:
     >
     > This script dynamically generates a personalized message for customers based on their account details. In our lab it is a Channel Support Number assigned to you. It is used within Webex Contact Center (WxCC) Flow Designer to enhance customer interactions.
     > 
-    > 1. How It Works:
-    >    Retrieves input variables from the Flow:
+    > 1. How It Works:</br>
+    >    Retrieves input variables from the Flow:</br>
+    >      - `lastPurchase` → Date of the last purchase (e.g., `"17-03-2025"`).</br>
+    >      - `outstandingBalance` → The amount owed by the customer (e.g., `"120.50"`).</br>
+    >      - `pendingServiceRequest` → Details of any unresolved service request (e.g., `"Network issue"`).</br>
+    >      - `resolutionDate` → Expected resolution date of the service request (e.g., `"20-03-2025"`).</br>
     > 
-    >   - `lastPurchase` → Date of the last purchase (e.g., `"17-03-2025"`).
-    >   - `outstandingBalance` → The amount owed by the customer (e.g., `"120.50"`).
-    >   - `pendingServiceRequest` → Details of any unresolved service request (e.g., `"Network issue"`).
-    >   - `resolutionDate` → Expected resolution date of the service request (e.g., `"20-03-2025"`).
-    > 
-    > 2. Processes and formats the data:
-    >
-    >   - Converts `lastPurchase` and `resolutionDate` from `"DD-MM-YYYY"` format into a more readable format (`March 17, 2025`).
-    >
-    >   - Ensures `outstandingBalance` is a valid number and avoids errors if it’s missing or invalid.
-    >
-    > 3. Generates a customer-friendly message:
-    >
-    >   - If the customer made a purchase, the date is included.
-    >   
-    >   - If an outstanding balance exists, the amount is shown.
-    >   
-    >   - If there’s a pending service request, it’s mentioned, along with a resolution date (if available).
-    >   
-    >   - If no pending issues exist, it confirms that everything is fine.
-    >
-    > 4. Returns the message to be used in the Flow:
-    >
-    >   - The script outputs `personalizedMessage`, which can be read out in an IVR or displayed to an agent.
-    >
+    > 2. Processes and formats the data:</br>
+    >      - Converts `lastPurchase` and `resolutionDate` from `"DD-MM-YYYY"` format into a more readable format (`March 17, 2025`).</br>
+    >      - Ensures `outstandingBalance` is a valid number and avoids errors if it’s missing or invalid.</br>
+    > 3. Generates a customer-friendly message:</br>
+    >      - If the customer made a purchase, the date is included.</br>
+    >      - If an outstanding balance exists, the amount is shown.</br>
+    >      - If there’s a pending service request, it’s mentioned, along with a resolution date (if available).</br>
+    >      - If no pending issues exist, it confirms that everything is fine.</br>
+    > 4. Returns the message to be used in the Flow:</br>
+    >      - The script outputs `personalizedMessage`, which can be read out in an IVR or displayed to an agent.</br>
     ></details>
 
 6. Perform a test to see how you script preforms by clicking on **Test** pannel below the editor. Provide following data into respective fields. Then click **Test** button.
@@ -303,7 +292,7 @@ Your mission is to:
     >
     > 7. In **JSONPath** box copy and paste one of the path expression from **FetchFlowSettings** to verify your results.
     >
-    > ![Profiles](../graphics/Lab2/BM2-9-10-JSONPath.gif)
+    > ![Profiles](../graphics/Lab2/BM2-10-JSONPath.gif)
     > </details>
 
 
@@ -327,28 +316,28 @@ Your mission is to:
     > **Parsing Settings:**
     >
     > Content Type: **JSON** 
-    >
-    > Output Variable: **`pendingServiceRequest`**<span class="copy-static" data-copy-text="pendingServiceRequest"><span class="copy" title="Click to copy!"></span></span>
-    >
-    > Path Expression: **`$[0].pendingServiceRequest`**<span class="copy-static" data-copy-text="$[0].pendingServiceRequest"><span class="copy" title="Click to copy!"></span></span>
-    >
-    > Click **Add New**
-    >
-    > Output Variable: **`lastPurchase`**<span class="copy-static" data-copy-text="lastPurchase"><span class="copy" title="Click to copy!"></span></span>
-    >
-    > Path Expression: **`$[0].lastPurchase`**<span class="copy-static" data-copy-text="$[0].lastPurchase"><span class="copy" title="Click to copy!"></span></span>
+    >>
+    >> Output Variable: **`pendingServiceRequest`**<span class="copy-static" data-copy-text="pendingServiceRequest"><span class="copy" title="Click to copy!"></span></span>
+    >>
+    >> Path Expression: **`$[0].pendingServiceRequest`**<span class="copy-static" data-copy-text="$[0].pendingServiceRequest"><span class="copy" title="Click to copy!"></span></span>
     >
     > Click **Add New**
-    >
-    > Output Variable: **`outstandingBalance`**<span class="copy-static" data-copy-text="outstandingBalance"><span class="copy" title="Click to copy!"></span></span>
-    >
-    > Path Expression: **`$[0].outstandingBalance`**<span class="copy-static" data-copy-text="$[0].outstandingBalance"><span class="copy" title="Click to copy!"></span></span>
+    >>
+    >> Output Variable: **`lastPurchase`**<span class="copy-static" data-copy-text="lastPurchase"><span class="copy" title="Click to copy!"></span></span>
+    >>
+    >> Path Expression: **`$[0].lastPurchase`**<span class="copy-static" data-copy-text="$[0].lastPurchase"><span class="copy" title="Click to copy!"></span></span>
     >
     > Click **Add New**
+    >>
+    >> Output Variable: **`outstandingBalance`**<span class="copy-static" data-copy-text="outstandingBalance"><span class="copy" title="Click to copy!"></span></span>
+    >>
+    >> Path Expression: **`$[0].outstandingBalance`**<span class="copy-static" data-copy-text="$[0].outstandingBalance"><span class="copy" title="Click to copy!"></span></span>
     >
-    > Output Variable: **`resolutionDate`**<span class="copy-static" data-copy-text="resolutionDate"><span class="copy" title="Click to copy!"></span></span>
-    >
-    > Path Expression: **`$[0].resolutionDate`**<span class="copy-static" data-copy-text="$[0].resolutionDate"><span class="copy" title="Click to copy!"></span></span>
+    > Click **Add New**
+    >>
+    >> Output Variable: **`resolutionDate`**<span class="copy-static" data-copy-text="resolutionDate"><span class="copy" title="Click to copy!"></span></span>
+    >>
+    >> Path Expression: **`$[0].resolutionDate`**<span class="copy-static" data-copy-text="$[0].resolutionDate"><span class="copy" title="Click to copy!"></span></span>
 
     ![Profiles](../graphics/APIFunction/API_Function7.gif)
 
