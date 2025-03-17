@@ -185,6 +185,7 @@ Your mission is to:
     > 4. Returns the message to be used in the Flow:</br>
     >      - The script outputs `personalizedMessage`, which can be read out in an IVR or displayed to an agent.</br>
     ></details>
+</br>
 
 6. Perform a test to see how you script preforms by clicking on **Test** pannel below the editor. Provide following data into respective fields. Then click **Test** button.
 
