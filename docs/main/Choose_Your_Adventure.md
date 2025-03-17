@@ -36,7 +36,7 @@ In this track, participants will work on customizing flows using a variety of AP
 
 The Callback track includes a series of labs focused on various callback scenarios. It begins with basic callback configuration and progresses to advanced GraphQL techniques to eliminate duplicate callbacks.
 
-![profiles](../graphics/overview/CallBack_Track.png)
+![profiles](../graphics/overview/Callback_Track.png)
 
 ## Track 4: AI Agent Track
 
