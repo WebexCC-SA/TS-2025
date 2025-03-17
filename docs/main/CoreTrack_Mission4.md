@@ -84,9 +84,9 @@ Event flows enable a wide range of scenarios, with one common use case being the
     
 5. Modify **Screenpop** configuration in the same flow
 
-    > Screen Pop URL: **[https://www.ciscolive.com/emea/faqs.html](https://www.ciscolive.com/emea/faqs.html){:target="_blank"}**<span class="copy-static" title="Click to copy!" data-copy-text="https://www.ciscolive.com/emea/faqs.html"><span class="copy"></span></span>
+    > Screen Pop URL: **[https://www.cisco.com/site/us/en/index.html](https://www.cisco.com/site/us/en/index.html){:target="_blank"}**<span class="copy-static" title="Click to copy!" data-copy-text="https://www.cisco.com/site/us/en/index.html"><span class="copy"></span></span>
     >
-    > Screen Pop Desktop Label: **Cisco Live Amsterdam 2025 FAQ**<span class="copy-static" title="Click to copy!" data-copy-text="Cisco Live Amsterdam 2025 FAQ"><span class="copy"></span></span>
+    > Screen Pop Desktop Label: **Cisco Official Web Site**<span class="copy-static" title="Click to copy!" data-copy-text="Cisco Official Web Site"><span class="copy"></span></span>
     >
     > Display Settings: **Inside Desktop**
   

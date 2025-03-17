@@ -79,7 +79,7 @@ Your mission is to:
 8. We are going to use **Override** option to change the logic. Overrides as well as Business hours have been preconfigured for you. Now we need to apply it on your **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Bussiness_Hours** entity. Switch to Control Hub and open **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Bussiness_Hours** in **Control Hub**, scroll down to **Additional Settings** and select **Overrides_Hours** from Override dropdown list. Then click **Save**.
 
     !!! Note
-        Override Hours entity was configured to overwrite Working Hours and set to duration of current Cisco Live lab 
+        Override Hours entity was configured to overwrite Working Hours and set to duration of current Technical Summit. 
 
     ![profiles](../graphics/Lab1/12-Overrides_Config.gif)
 
