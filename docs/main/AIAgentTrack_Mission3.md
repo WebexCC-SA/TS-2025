@@ -5,7 +5,7 @@ icon: material/medal
 
 
 
-# Mission 7: Seamless AI to Human Agent Handoffs
+# Mission 3: Seamless AI to Human Agent Handoffs
 
 > !!! Note
       This task relies on completing Mission 7 of the Fundamental Labs. Ensure that mission is completed to have a fully functional AI Scripted Agent feature in the Contact Center.

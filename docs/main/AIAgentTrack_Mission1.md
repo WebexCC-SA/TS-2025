@@ -80,7 +80,7 @@ Your mission is to:
     >
     > System ID is created automatically
     >
-    > AI engine: **Nova**
+    > AI engine: **Webex AI Pro 1.0**
     >
     > Knowledge base: **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_AI_KB">Your_Attendee_ID</span>_AI_KB<span class="copy"></span>**
     > 
