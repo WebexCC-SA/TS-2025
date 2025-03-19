@@ -16,8 +16,8 @@ A customer reports a critical issue with their call flow: callers cannot land in
 ## Mission Details
 Your task is to identify and fix the issues causing this behavior. Specifically:
 
-1. The flow should correctly execute the HTTP request and retrieve the expected value of Queue_140 **ID**.</br>
-2. The queue node should reference the queue dynamically using a variable, ensuring that calls are directed to Queue_140.</br>
+1. The flow should correctly execute the HTTP request and retrieve the expected value of **BossQueue**.</br>
+2. The queue node should reference the queue dynamically using a variable, ensuring that calls are directed to BossQueue.</br>
 3. Calls should land in the intended queue instead of being redirected to the TAC Service number.</br>
 4. The phone in the middle of the room should ring, signaling a successful fix.</br>
 
