@@ -136,9 +136,9 @@ nav:
             - "Mission 4: Call Drop Summary": ./main/AI_Assistant_CallDropSummary.md
 ###            - "Mission 5: AI in Action (Scripted Agent) - Old UI Interface": ./main/AIAgentTrack_Mission5.md
       - Conclusion: ./main/AIAgentTrack_Conclusion.md
-  - FINAL CHALLENGE:
-      - Troubleshooting Mission:
-            - "Final Challenge: Production flow is failing!": ./main/FinalBossFight_Mission.md
+###  - FINAL CHALLENGE:
+###      - Troubleshooting Mission:
+###            - "Final Challenge: Production flow is failing!": ./main/FinalBossFight_Mission.md
 ###            - "Hint for Final Challenge Mission!": ./main/FinalBossFight_Hint1.md
 ###            - "Solution Guidance for Final Challenge Fight Mission!": ./main/FinalBossFight_Solution.md
   - Quick Links: quicklinks.md
