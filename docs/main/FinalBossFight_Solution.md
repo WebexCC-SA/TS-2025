@@ -12,11 +12,11 @@ icon: material/bullseye-arrow
     >
     > - Output Variable: `queuevar`<span class="copy-static" data-copy-text="queuevar"><span class="copy" title="Click to copy!"></span></span>
     >
-    > - Path Expression: `$[0].queue140`<span class="copy-static" data-copy-text="$[0].queue140"><span class="copy" title="Click to copy!"></span></span>
+    > - Path Expression: `$[0].bossqueue`<span class="copy-static" data-copy-text="$[0].bossqueue"><span class="copy" title="Click to copy!"></span></span>
 
 3. **Wrong condition**: Ensure **Check_HTTP_Status_Code** status check is looking for ***200***, not ***201***. Adjust the condition logic accordingly.</br>
 
-4. **Queue ID verification**: In **Condition_MatchingQueue** `queuevar` must have a value of Queue_140 **ID** in order to exit via **True** node edge.
+4. **Queue ID verification**: In **Condition_MatchingQueue** `queuevar` must have a value of BossQueue **ID** in order to exit via **True** node edge.
 
       ![profiles](../graphics/Lab2/FinalBoss_Solution.png)
 
