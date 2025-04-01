@@ -25,17 +25,19 @@ Your task is to identify and fix the issues causing this behavior. Specifically:
 
 1. <span style="color: red;">[IMPORTANT]</span> [Download](https://drive.google.com/drive/folders/1ubgdUQyHJnxFMWc1ecMStl8W0JhA6SAw?usp=drive_link){:target="_blank"} your troublshooting flow from shared folder.
 
-     ![Profiles](../graphics/Lab2/Tshoot_GoogleDrive.gif)
+2. In **Search in Drive** line search for **<span class="attendee-id-container">FinalBoss_Flow_<span class="attendee-id-placeholder" data-prefix="FinalBoss_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**. Then download the file to your local drive.
 
-2. In **Search in Drive** line search for **<span class="attendee-id-container">FinalBoss_Flow_<span class="attendee-id-placeholder" data-prefix="FinalBoss_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**. Then download it to your local drive.
+     ![Profiles](../graphics/Lab2/Tshoot_GoogleDrive.gif)
 
 3. Switch to **Control Hub** and navigate to **Flows**. Click on **Manage Flows**, then select **Import Flows**.
 
-4. Click on **Choose a file**, then navigate to the folder where you saved your **<span class="attendee-id-container">FinalBoss_Flow_<span class="attendee-id-placeholder" data-prefix="FinalBoss_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** to your **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>**. Select the file and click **Open**
+4. Click on **Choose a file**, then navigate to the folder where you saved your **<span class="attendee-id-container">FinalBoss_Flow_<span class="attendee-id-placeholder" data-prefix="FinalBoss_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**. Select the file and click **Open**
 
 5. Click **Import**. This step will create your personal troubleshooting flow.
 
-6. Publish your flow.
+6. Switch **Edit** from  **Off** to **On**. Switch **Validation** from  **Off** to **On**. Then **Publish** your flow.
+
+     ![Profiles](../graphics/Lab2/Tshoot_ImportFlow.gif)
 
 7. Assign **<span class="attendee-id-container">FinalBoss_Flow_<span class="attendee-id-placeholder" data-prefix="FinalBoss_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** to your **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>**.
 
