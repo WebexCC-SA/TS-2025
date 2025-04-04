@@ -28,18 +28,18 @@ The Autonomous AI Agent for performing actions can handle various tasks, includi
 
 ## Story
 
-As a visitor to Amsterdam, you want to quickly find restaurants offering various international cuisines in the city and easily figure out how to get to them from your current location at the Cisco Office in Amsterdam.
+As a visitor to Dallas, you want to quickly find restaurants offering various international cuisines in the city and easily figure out how to get to them from your current location at the Cisco Office in Richardson.
 
 ### Call Flow Overview
 
 1. A new call enters the flow. </br>
-2. The caller asks about restaurants in Amsterdam.</br>
+2. The caller asks about restaurants in Dallas.</br>
 3. The AI agent responds with information generated from the knowledge base configuration.</br>
 
 ## Mission overview
 Your mission is to:
 
-1. Create a knowledge base (KB) and AI agent to provide answers about Amsterdam, including places to visit, restaurants, nightclubs, and directions from the Cisco Office in Amsterdam.</br>
+1. Create a knowledge base (KB) and AI agent to provide answers about Richardson, including places to visit, restaurants, nightclubs, and directions from the Cisco Office in Richardson.</br>
 2. Configure the AI agent with handoff functionality to transfer the conversation to a live agent when necessary.</br>
 
 ---
@@ -51,7 +51,7 @@ Your mission is to:
 1. <span style="color: red;">[IMPORTANT]</span> [Download](https://drive.google.com/drive/folders/1b8x_om4rQonuJ52wRYif1LPP5qEX4RDI?usp=sharing){:target="_blank"} source file from shared folder.
     
     > 
-    > **Amsterdam_Tourist_Guide.txt** - file contains information for tourists like places to visit, restaurants, pubs etc. and how to reach those places from the Cisco Office in Amsterdam.
+    > **Richardson_Tourist_Guide.txt** - file contains information for tourists like places to visit, restaurants, pubs etc. and how to reach those places from the Cisco Office in Richardson.
     >
 
 2. Login into [Webex Control Hub](https://admin.webex.com){:target="_blank"} by using your Admin profile **<span class="attendee-id-container">wxcclabs+admin_ID<span class="attendee-id-placeholder" data-prefix="wxcclabs+admin_ID" data-suffix="@gmail.com">Your_Attendee_ID</span>@gmail.com<span class="copy" title="Click to copy!"></span></span>**. You will see another login screen with OKTA on it where you may need to enter the email address again and the password provided to you.
@@ -66,7 +66,7 @@ Your mission is to:
 
     ![Profiles](../graphics/Lab1/L1M7_AIKBCreate.gif)
 
-6. Click **Add File** or drag and drop file **Amsterdam_Tourist_Guide.txt** you downloaded from external drive on **Step 1**. Then click **Process Files**.
+6. Click **Add File** or drag and drop file **Richardson_Tourist_Guide.txt** you downloaded from external drive on **Step 1**. Then click **Process Files**.
 
     ![Profiles](../graphics/Lab1/L1M7_AIKBFileUpload.gif)
 
@@ -84,7 +84,7 @@ Your mission is to:
     >
     > Knowledge base: **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_AI_KB">Your_Attendee_ID</span>_AI_KB<span class="copy"></span>**
     > 
-    > Agent's goal: ***You are a helpful, polite agent who will help the user with their Amsterdam related queries such as restaurant, pubs, places to visit and what transport can be used to get there.***<span class="copy-static" title="Click to copy!" data-copy-text="You are a helpful, polite   agent who will help the user with their Amsterdam related queries such as restaurant, pubs, places to visit and what transport can be used to get there."><span class="copy"></span></span>
+    > Agent's goal: ***You are a helpful, polite agent who will help the user with their Dallas related queries such as restaurant, pubs, places to visit and what transport can be used to get there.***<span class="copy-static" title="Click to copy!" data-copy-text="You are a helpful, polite agent who will help the user with their Dallas related queries such as restaurant, pubs, places to visit and what transport can be used to get there."><span class="copy"></span></span>
 
 
     ![Profiles](../graphics/Lab1/AITrack_AIAgentCreate.gif)
@@ -98,7 +98,7 @@ Your mission is to:
 
     ![Profiles](../graphics/Lab1/AITrack_AIAgentaMapKB.gif)
 
-14. Click on **Preview** to test your AI Agent and ask the following: **"I'm looking for an Italian restaurant close to Cisco Office in Amsterdam."**<span class="copy-static" title="Click to copy!" data-copy-text="I'm looking for an Italian restaurant close to Cisco Office in Amsterdam."><span class="copy"></span></span>
+14. Click on **Preview** to test your AI Agent and ask the following: **"I'm looking for an Italian restaurant close to Cisco Office in Richardson."**<span class="copy-static" title="Click to copy!" data-copy-text="I'm looking for an Italian restaurant close to Cisco Office in Richardson."><span class="copy"></span></span>
 
 ![Profiles](../graphics/Lab1/AITrack_AIAgentPreview.gif)
 
@@ -182,7 +182,7 @@ Your mission is to:
 
     ![profiles](../graphics/Lab1/5-Agent_Login.gif)
 
-4. Dial the support number assigned to your **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Channel** channel, and during the conversation with the virtual agent, ask about restaurants in Amsterdam or places to visit to explore historical sites.
+4. Dial the support number assigned to your **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Channel** channel, and during the conversation with the virtual agent, ask about restaurants in Dallas or places to visit to explore historical sites.
 
 5. Any time during conversation request to connect you with a live agent. The call will be transferred to your agent.
 

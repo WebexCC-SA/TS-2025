@@ -40,7 +40,7 @@ This mission is designed to provide an in-depth understanding of the Webex AI Ag
 0. <span style="color: red;">[IMPORTANT]</span> [Download](https://drive.google.com/drive/folders/1b8x_om4rQonuJ52wRYif1LPP5qEX4RDI?usp=sharing){:target="_blank"} source file from shared folder.
     
     > 
-    > **TaskBot_Template.json** - The Appointment Booking template for the AI Agent in Webex Contact Center enables customers to schedule, reschedule, or cancel appointments through an AI-powered virtual agent, integrating with backend systems for real-time availability and confirmations.
+    > **TaskBotTemplate.json** - The Appointment Booking template for the AI Agent in Webex Contact Center enables customers to schedule, reschedule, or cancel appointments through an AI-powered virtual agent, integrating with backend systems for real-time availability and confirmations.
     >
 
 1. Login into [Webex Control Hub](https://admin.webex.com){:target="_blank"} by using your Admin profile **wxcclabs+admin_ID<span class="attendee-id-placeholder">Your_Attendee_ID</span>@gmail.com**. You will see another login screen with OKTA on it where you may need to enter the email address again and the password provided to you.
@@ -49,7 +49,7 @@ This mission is designed to provide an in-depth understanding of the Webex AI Ag
 
     ![Profiles](../graphics/AI_Track/AI_Scripted_OpenWebexAI.gif)  
 
-3. Click on **Import agent** to create a new bot by importing preconfigured template. Click on **Upload** button, locate and select **TaskBot_Template.json** you downloaded at the beginning of the mission..
+3. Click on **Import agent** to create a new bot by importing preconfigured template. Click on **Upload** button, locate and select **TaskBotTemplate.json** you downloaded at the beginning of the mission..
 4. Name your Agent as **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_TaskBot">Your_Attendee_ID</span>_TaskBot<span class="copy" title="Click to copy!"></span></span>** and click **Import**
 5. Make the bot live by clicking on the **Publish** button on the top right.
 6. Enter **v1** in the popup window, then click **Publish**.
