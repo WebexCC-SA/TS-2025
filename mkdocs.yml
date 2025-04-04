@@ -142,5 +142,5 @@ nav:
 ###            - "Hint for Final Challenge Mission!": ./main/FinalBossFight_Hint1.md
 ###            - "Solution Guidance for Final Challenge Fight Mission!": ./main/FinalBossFight_Solution.md
   - Quick Links: quicklinks.md
-  - Ask a Question<i class="fa-solid fa-hand" style="color:#63E6BE;"></i>: slido-QA-iFrame.md
+###  - Ask a Question<i class="fa-solid fa-hand" style="color:#63E6BE;"></i>: slido-QA-iFrame.md
 
