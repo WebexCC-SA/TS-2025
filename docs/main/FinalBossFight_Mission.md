@@ -18,7 +18,7 @@ Your task is to identify and fix the issues causing this behavior. Specifically:
 
 1. The flow should correctly execute the HTTP request and retrieve the expected value of **BossQueue**.</br>
 2. The queue node should reference the queue dynamically using a variable, ensuring that calls are directed to BossQueue.</br>
-3. Calls should land in the intended queue instead of being redirected to the TAC Service number.</br>
+3. Calls should land in the intended queue.</br>
 4. The phone in the middle of the room should ring, signaling a successful fix.</br>
 
 ## Before you start troubleshooting...
@@ -48,7 +48,7 @@ Your task is to identify and fix the issues causing this behavior. Specifically:
 
 ## Competition & Rewards
 A real IP phone is placed in the middle of the room, and an agent logs into Webex Desktop using that phone as the telephony option. Once the call flow is successfully fixed, the phone will ring, and the agent will accept the call.</br>
-The first three participants to successfully make the phone ring—without cheating and by following the rules explained previously—will win a prize. This encourages fast and accurate troubleshooting, making the exercise more engaging and competitive.
+The first 2 participants to successfully make the phone ring—without cheating and by following the rules explained previously—will win a prize. This encourages fast and accurate troubleshooting, making the exercise more engaging and competitive.
 
 ---
 
