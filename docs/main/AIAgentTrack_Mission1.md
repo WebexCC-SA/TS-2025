@@ -5,7 +5,7 @@ icon: material/medal
 
 
 
-# Mission 1: AI Autonomous Agent in Action
+# Mission 1: AI Autonomous Agent in Action.
 
 ## <span style="color: blue;">**Recommendation**</span></summary>
 **If the AI Agent feature is already enabled on your Gold Tenant via the Beta Portal, we recommend using it there instead of the shared environment. This helps avoid tenant limitations, such as the maximum of 100 configurable AI Agents.**
