@@ -84,11 +84,63 @@ Your mission is to:
     > 
     > Method: **POST**
     > 
-    > Content Type: **Application/JSON**
+    > Content Type: **GraphQL**
     >
     > Copy this GraphQL query into the request body:
     >
-    ```JSON
+    > Query:
+    ```GraphQL
+    query callbackSearch($from: Long!, $to: Long!, $filter: TaskDetailsFilters) {
+    taskDetails(from: $from, to: $to, filter: $filter) {
+      tasks {
+        callbackData {
+          callbackRequestTime
+          callbackConnectTime
+          callbackNumber
+          callbackStatus
+          callbackOrigin
+          callbackType
+        }
+        lastEntryPoint {
+          id
+          name
+          }
+        }
+      }
+    }
+    ```
+
+    > Variables: 
+      ```JSON
+      {
+        "from": "{{now() | epoch(inMillis=true) - 15000000}}",
+        "to": "{{now() | epoch(inMillis=true)}}",
+        "filter": {
+          "and": [
+            {
+              "callbackData": {
+                "equals": {
+                  "callbackNumber": "{{NewNumber.DigitsEntered}}"
+                }
+              }
+            },
+            {
+              "lastEntryPoint": {
+                "id": {
+                  "equals": "{{NewPhoneContact.EntryPointId}}"
+                }
+              }
+            }
+          ]
+        }
+      }
+
+      ```
+
+
+  
+
+    <!-- ```JSON
     {"query":"query($from: Long!, $to: Long!)\n{\n  taskDetails(\n      from: $from\n      to: $to\n    filter: {\n      and: [\n       { callbackData: { equals: { callbackNumber: \"{{NewNumber.DigitsEntered}}\" } } }\n       { lastEntryPoint: { id: { equals: \"{{NewPhoneContact.EntryPointId}}\" } } }\n      ]\n    }\n  ) {\n    tasks {\n      callbackData {\n        callbackRequestTime\n        callbackConnectTime\n        callbackNumber\n        callbackStatus\n        callbackOrigin\n        callbackType\n      }\n       lastEntryPoint {\n        id\n        name\n      }\n    }\n  }\n}","variables":{"from":"{{now() | epoch(inMillis=true) - 15000000}}","to":"{{now() | epoch(inMillis=true)}}"}}
     ```
     > <details><summary>Expanded Query For Understanding (optional)</summary>
@@ -122,7 +174,7 @@ Your mission is to:
       }
     }
     ```
-    </details>
+    </details> -->
 
     > Parse Settings:
     >
@@ -139,7 +191,7 @@ Your mission is to:
     </br>
     </br>
     
-      ![profiles](../graphics/Lab2/L2M3-2.gif)
+      ![profiles](../graphics/Lab2/L2M3-2_New2.gif)
 ---     
 
 4. Add **Set Veriable** node
