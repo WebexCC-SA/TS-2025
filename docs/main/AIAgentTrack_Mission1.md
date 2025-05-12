@@ -134,7 +134,7 @@ Your mission is to:
 16. In the **Webex Connect Flow Builder Fulfillment** section, select the **TS_2025** service and the flow **restaurant_reservation**. 
 
     !!! Warning
-        Creating the Webex Connect flow that executes the action is out of scope for this lab. If you are running this lab in your own gold tenant, here's the flow file. 
+        Creating the Webex Connect flow that executes the action is out of scope for this lab. If you are running this lab in your own gold tenant, here's the flow file **TS_2025_rest_reserve**. [Download](https://drive.google.com/drive/folders/1b8x_om4rQonuJ52wRYif1LPP5qEX4RDI?usp=sharing){:target="_blank"}
 
     ![Profiles](../graphics/Lab1/AITrack_AIAgent_Action.gif)
 
@@ -222,7 +222,7 @@ Your mission is to:
 
     ![profiles](../graphics/Lab1/5-Agent_Login.gif)
 
-4. Dial the support number assigned to your **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Channel** channel, and during the conversation with the virtual agent, ask about restaurants in Dallas or places to visit to explore historical sites.
+4. Dial the support number assigned to your **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Channel** channel, and during the conversation with the virtual agent, ask about restaurants, bars or tourist attractions in Dallas. Test the reservation action by providing all the details required by the AI Agent, you should receive a confirmation SMS (US numbers only). 
 
 5. Any time during conversation request to connect you with a live agent. The call will be transferred to your agent.
 
