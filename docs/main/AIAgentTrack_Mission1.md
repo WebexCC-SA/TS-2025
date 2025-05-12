@@ -128,7 +128,7 @@ Your mission is to:
     >| restaurant_name  | String   |    -   | Based on the recommended restaurant for the user |
     >| phone_number     | Phone    | \+?\d{0,3}\s?\(?\d{1,4}\)?[-\s]?\d{1,4}[-\s]?\d{1,4}[-\s]?\d{1,4} | A valid phone number with country code |
     >| number_guests    | number   |    -   | Number of guests attending |
-    >| dinner_time      | time     | hh\:mm\:ss | Time should be in UTC / Z Timezone |
+    >| dinner_time      | time     | hh\:mm\:ss | Time of the reservation |
     >| date             | date     | YYYY-mm-dd | User’s preferred date in the given format |
 
 16. In the **Webex Connect Flow Builder Fulfillment** section, select the **TS_2025** service and the flow **restaurant_reservation**. 
