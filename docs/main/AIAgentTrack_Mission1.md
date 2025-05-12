@@ -24,19 +24,21 @@ The Autonomous AI Agent for performing actions can handle various tasks, includi
 
 ## Story
 
-As a visitor to Dallas, you want to quickly find restaurants offering various international cuisines in the city and easily figure out how to get to them from your current location at the Cisco Office in Richardson.
+As a visitor to Dallas, you want to quickly find restaurants offering various international cuisines in the city and place dinner reservations without having to call the restaurant. 
 
 ### Call Flow Overview
 
 1. A new call enters the flow. </br>
 2. The caller asks about restaurants in Dallas.</br>
-3. The AI agent responds with information generated from the knowledge base configuration.</br>
+3. The AI agent asks about the caller's cuisine preference and provides a recommendation.</br>
+4. The AI agent offers to place a reservation for the caller. It then proceeds to collect reservation details, such as name, number of guests, etc.</br>
+5. The AI agent submits the reservation and sends a confirmation SMS to the caller.</br>
 
 ## Mission overview
 Your mission is to:
 
-1. Create a knowledge base (KB) and AI agent to provide answers about Richardson, including places to visit, restaurants, nightclubs, and directions from the Cisco Office in Richardson.</br>
-2. Configure the AI agent with handoff functionality to transfer the conversation to a live agent when necessary.</br>
+1. Create a knowledge base (KB) and AI agent to provide answers about Richardson, including tourist attractions, restaurants, bars, and directions from the Cisco Office in Richardson.</br>
+2. Configure the AI agent with an action to place a dinner reservation.</br>
 
 ---
 
@@ -76,27 +78,69 @@ Your mission is to:
     >
     > System ID is created automatically
     >
-    > AI engine: **Webex AI Pro 1.0**
+    > AI engine: **Webex AI Pro-US 1.0**
     >
     > Knowledge base: **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_AI_KB">Your_Attendee_ID</span>_AI_KB<span class="copy"></span>**
     > 
-    > Agent's goal: ***You are a helpful, polite agent who will help the user with their Dallas related queries such as restaurant, pubs, places to visit and what transport can be used to get there.***<span class="copy-static" title="Click to copy!" data-copy-text="You are a helpful, polite agent who will help the user with their Dallas related queries such as restaurant, pubs, places to visit and what transport can be used to get there."><span class="copy"></span></span>
+    > Agent's goal: ***Assist users with finding the top restaurants, best pubs & bars and tourist attractions in Richardson. Help users place reservations for dinner to one of the top restaurants in the knowledge base. Maintain a polite, and user-friendly tone throughout.***<span class="copy-static" title="Click to copy!" data-copy-text="Assist users with finding the top restaurants, best pubs & bars and tourist attractions in Richardson. Help users place reservations for dinner to one of the top restaurants in the knowledge base. Maintain a polite, and user-friendly tone throughout."><span class="copy"></span></span>
 
-
-    ![Profiles](../graphics/Lab1/AITrack_AIAgentCreate.gif)
-
-
-11. Switch to **Actions** tab ans make sure **Agent handover** togle is turned on. This will allow you to handoff calls to human agent on request while talking to your Virtual Agent.
+11. Once the agent is created, add the **Instructions** to orchestrate how the AI Agent will execute the actions. Here are the details: 
+    
+    ```
+    ## Identity
+    Role Definition: You are a friendly and polite assistant that helps tourists find the best places to eat, drink and have fun.
+    Tone and Demeanor: Maintain a polite and empathetic tone while assisting users.
+    
+    ##Tasks
+    
+    ### Provide recommendations to restaurants, bars and attractions from the KB:
+    1.	Ask if they are interested in dinner, drinks or tourist attractions.
+    2. Before making a recommendation, check if they have any preference (e.g., "any cuisine preference for dinner?" "do you prefer artistic attractions or more of a outdoors xperience?")
+    3. Recommendation should focus only on the name, type of cuisine or type of attraction. Do not include the Address or how to get there.
+    
+    ## Offer to place a reservation at the recommended restaurant or bar. Do not offer this option for tourist attractions. 
+    1. You need to have the following information to execute the dinner_reservation action: 
+    - Number of guests
+    - Time of the reservation in US central timezone. 
+    - Name of the restaurant or pub
+    - Customer name for the reservation 
+    - Phone number
+    2. Once the reservation is complete, let the user know a confirmation will be send via sms to their mobile, including the address of the restaurant.
+    
+    ##Completion:
+    •	Ask if the user needs additional help before ending.
+    ```
+    
 
 12. Switch to **Knowledge** tab and from **Knowledge base** drop-down list select **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_AI_KB">Your_Attendee_ID</span>_AI_KB<span class="copy" title="Click to copy!"></span></span>**
 
 13. Click **Save Changes**, then click **Publish**. Provide any version name in popped up window (ex. "1.0").
 
-    ![Profiles](../graphics/Lab1/AITrack_AIAgentaMapKB.gif)
+    ![Profiles](../graphics/Lab1/AITrack_AIAgentCreate.gif)
 
-14. Click on **Preview** to test your AI Agent and ask the following: **"I'm looking for an Italian restaurant close to Cisco Office in Richardson."**<span class="copy-static" title="Click to copy!" data-copy-text="I'm looking for an Italian restaurant close to Cisco Office in Richardson."><span class="copy"></span></span>
+14. Switch to the **Actions** tab and click the **New action** button. Proceed to name the action **dinner_reservation**, add a description and select the action scope option called **Slot filling and fulfillment**. 
 
-![Profiles](../graphics/Lab1/AITrack_AIAgentPreview.gif)
+15. Create new input entities for the data required to place a reservation, these are the details for each entity: 
+
+    >| Entity Name      | Type     | Value  | Description  |
+    >| :--------:       | :-------:| :----: | :---------:  |
+    >| reservation_name | string   |    -   | Name on the reservation |
+    >| restaurant_name  | String   |    -   | Based on the recommended restaurant for the user |
+    >| phone_number     | Phone    | \+?\d{0,3}\s?\(?\d{1,4}\)?[-\s]?\d{1,4}[-\s]?\d{1,4}[-\s]?\d{1,4} | A valid phone number with country code |
+    >| number_guests    | number   |    -   | Number of guests attending |
+    >| dinner_time      | time     | hh\:mm\:ss | Time should be in UTC / Z Timezone |
+    >| date             | date     | YYYY-mm-dd | User’s preferred date in the given format |
+
+16. In the **Webex Connect Flow Builder Fulfillment** section, select the **TS_2025** service and the flow **restaurant_reservation**. 
+
+    !!! Warning
+        Creating the Webex Connect flow that executes the action is out of scope for this lab. If you are running this lab in your own gold tenant, here's the flow file. 
+
+    ![Profiles](../graphics/Lab1/AITrack_AIAgent_Action.gif)
+
+14. Click on **Preview** to test your AI Agent and ask for a restaurant recommendation and place a dinner reservation. 
+
+    ![Profiles](../graphics/Lab1/AITrack_AIAgentPreview2.gif)
 
 ---
 
