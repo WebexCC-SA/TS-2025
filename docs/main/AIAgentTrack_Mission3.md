@@ -100,7 +100,7 @@ Your mission is to:
     > Connect the **Set Variable** activity to **Queue Contact** activity
 
 
-    ![profiles](../graphics/Lab2/GIF.gif)
+    ![profiles](../graphics/Lab2/RT_Set_Variable.gif)
 
 
 4. Switch to **Event Flow** tab and add **Condition**, **Start Media Stream** and **EndFlow** nodes
@@ -115,11 +115,13 @@ Your mission is to:
 
 5. **Validate** and **Publish** the flow. In popped up window click on dropdown menu to select **Latest** label, then click **Publish**.
 
-    ![profiles](../graphics/Lab2/GIF.gif)
+    ![profiles](../graphics/Lab2/RT_Media_Stream.gif)
 
 6. Switch to **Control Hub**. Navigate to **Team** under **User Management**, locate your Team **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Team">Your_Attendee_ID</span>_Team<span class="copy" title="Click to copy!"></span></span>**.
 
 7. Change **Desktop layout** to **RT_Transcript**. Then click **Save**. This layout will add a new tab for real-time transcript.
+
+    ![profiles](../graphics/Lab2/Team_RT_Layout.gif)
 
 > **<details><summary>Changes in Desktop Layout<span style="color: orange;">[Optional]</span></summary>**
     ``` JSON
@@ -168,9 +170,9 @@ Your mission is to:
 
 4. Dial the support number assigned to your **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>** channel and during the conversation with the virtual Agent, say, **"Please transfer me to an Agent."** Answer the call on the agent desktop when you receive a ring notification and verify the trasciption is passed to Agent Desktop.
 
-5. Once the call is answered, disconnect the call by clicking on the **End** button.
+    ![profiles](../graphics/Lab2/RT_Desktop.png)
 
-    ![profiles](../graphics/Lab2/L2M4_Test1_Handoff.gif)
+5. Once the call is answered, disconnect the call by clicking on the **End** button.
 
 
 ### Disable Virtual Agent Transcript
