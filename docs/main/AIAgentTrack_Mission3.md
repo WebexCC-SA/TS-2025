@@ -83,6 +83,10 @@ Your mission is to:
 
     ![profiles](../graphics/Lab2/L2M4_Test1_Handoff.gif)
 
+### Enable Real-Time Transcriptions
+
+1. In **Control Hub** select Contact Center from the left panel and then navigate to Desktop Experience. Click on AI Assistant and make sure Real-time Transcriptions is enabled. Click on Manage flows from Real-time Transcription, search and open your **<span class="attendee-id-container">TaskBot_Flow_<span class="attendee-id-placeholder" data-prefix="TaskBot_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**
+
 ### Disable Virtual Agent Transcript
 
 1. Open your flow **<span class="attendee-id-container">TaskBot_Flow_<span class="attendee-id-placeholder" data-prefix="TaskBot_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** and switch **Edit: Off** mode to **Edit: On** if it's not.
