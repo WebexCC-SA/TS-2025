@@ -94,8 +94,6 @@ Your mission is to:
     > Variable: **Transcription_required**<span class="copy-static" title="Click to copy!" data-copy-text="Transcription_required"><span class="copy"></span></span>
     >
     > Set Value: **true**
-    > 
-    > Delete connection between **NewPhoneContact** and **Set Variable** on which we configured Language while doing the Main Lab.
     >
     > Connect the **Escalated** path of Virtual Agent V2 to **Set Variable**
     >
@@ -119,16 +117,60 @@ Your mission is to:
 
     ![profiles](../graphics/Lab2/GIF.gif)
 
-4.	Switch to **Control Hub**, select **Contact Center** from the left panel and then navigate to **Teams**. Select and open your Team ID then from Desktop layout choose RT_Transcript.
-(Note* this layout will add a new tab for real-time transcript)
+6. Switch to **Control Hub**. Navigate to **Team** under **User Management**, locate your Team **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Team">Your_Attendee_ID</span>_Team<span class="copy" title="Click to copy!"></span></span>**.
 
+7. Change **Desktop layout** to **RT_Transcript**. Then click **Save**. This layout will add a new tab for real-time transcript.
 
+> **<details><summary>Changes in Desktop Layout<span style="color: orange;">[Optional]</span></summary>**
+    ``` JSON
+    {
+    "comp": "md-tab",
+    "attributes": {
+    "slot": "tab",
+    "class": "widget-pane-tab"
+    },
+    "children": [
+    {
+    "comp": "slot",
+    "attributes": {
+    "name": "RT_TRANSCRIPT_TAB"
+    }
+    }
+    ],
+    "visibility": "RT_TRANSCRIPT"
+    },
+    {
+    "comp": "md-tab-panel",
+    "attributes": {
+    "slot": "panel",
+    "class": "widget-pane"
+    },
+    "children": [
+    {
+    "comp": "slot",
+    "attributes": {
+    "name": "RT_TRANSCRIPT"
+    }
+    }
+    ],
+    "visibility": "RT_TRANSCRIPT"
+    },
+    ```
+</details>
 
+### Checkpoint: Enable Real-time Transcription
 
+1. Your Agent desktop session should be still active but if not, use Webex CC Desktop application ![profiles](../graphics/overview/Desktop_Icon40x40.png) and login with agent credentials you have been provided **<span class="attendee-id-container">wxcclabs+agent_ID<span class="attendee-id-placeholder" data-prefix="wxcclabs+agent_ID" data-suffix="@gmail.com">Your_Attendee_ID</span>@gmail.com<span class="copy" title="Click to copy!"></span></span>**. You will see another login screen with OKTA on it where you may need to enter the email address again and the password provided to you. 
+2. Select Team **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Team">Your_Attendee_ID</span>_Team<span class="copy" title="Click to copy!"></span></span>**. Click **Submit**. Allow browser to access Microphone by clicking **Allow** on ever visit.
+3. Make your agent ***Available*** and you're ready to make a call.
 
+    ![profiles](../graphics/Lab1/5-Agent_Login.gif)
 
+4. Dial the support number assigned to your **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>** channel and during the conversation with the virtual Agent, say, **"Please transfer me to an Agent."** Answer the call on the agent desktop when you receive a ring notification and verify the trasciption is passed to Agent Desktop.
 
+5. Once the call is answered, disconnect the call by clicking on the **End** button.
 
+    ![profiles](../graphics/Lab2/L2M4_Test1_Handoff.gif)
 
 
 ### Disable Virtual Agent Transcript
