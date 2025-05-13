@@ -87,6 +87,50 @@ Your mission is to:
 
 1. In **Control Hub** select Contact Center from the left panel and then navigate to Desktop Experience. Click on AI Assistant and make sure Real-time Transcriptions is enabled. Click on Manage flows from Real-time Transcription, search and open your **<span class="attendee-id-container">TaskBot_Flow_<span class="attendee-id-placeholder" data-prefix="TaskBot_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**
 
+2.	Switch the Edit button to **On** to enable Edit mode in the flow builder then add Global Variable **Transcription_required** to your flow.
+
+3. Drag **Set Variable** node to canvas:
+
+    > Variable: **Transcription_required**<span class="copy-static" title="Click to copy!" data-copy-text="Transcription_required"><span class="copy"></span></span>
+    >
+    > Set Value: **true**
+    > 
+    > Delete connection between **NewPhoneContact** and **Set Variable** on which we configured Language while doing the Main Lab.
+    >
+    > Connect the **Escalated** path of Virtual Agent V2 to **Set Variable**
+    >
+    > Connect the **Set Variable** activity to **Queue Contact** activity
+
+
+    ![profiles](../graphics/Lab2/GIF.gif)
+
+
+4. Switch to **Event Flow** tab and add **Condition**, **Start Media Stream** and **EndFlow** nodes
+
+    > Connect **AgentAnswer** event handler to *Condition* activity and set the Expression to **{{Transcription_required}}**<span class="copy-static" title="Click to copy!" data-copy-text="{{Transcription_required}}"><span class="copy"></span></span>
+    >
+    > Connect **Condition** True path to **Media Start Stream** activity
+    >
+    > Connect **Condition** False path to **EndFlow** activity
+    >
+    > Connect **Media Start Stream** activity to **EndFlow** activity
+
+5. **Validate** and **Publish** the flow. In popped up window click on dropdown menu to select **Latest** label, then click **Publish**.
+
+    ![profiles](../graphics/Lab2/GIF.gif)
+
+4.	Switch to **Control Hub**, select **Contact Center** from the left panel and then navigate to **Teams**. Select and open your Team ID then from Desktop layout choose RT_Transcript.
+(Note* this layout will add a new tab for real-time transcript)
+
+
+
+
+
+
+
+
+
+
 ### Disable Virtual Agent Transcript
 
 1. Open your flow **<span class="attendee-id-container">TaskBot_Flow_<span class="attendee-id-placeholder" data-prefix="TaskBot_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** and switch **Edit: Off** mode to **Edit: On** if it's not.
