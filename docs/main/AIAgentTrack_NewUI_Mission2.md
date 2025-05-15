@@ -22,7 +22,7 @@ The mission is designed to provide a hands-on understanding of creating Cisco Vi
 
 This mission is designed to provide an in-depth understanding of the Webex AI Agents available in Webex Contact Center. By completing this section of the lab, you will:
 
-- Gain practical skills and knowledge on how to effectively utilize Webex Contact Center's AI capabilities to create self-service automation.v
+- Gain practical skills and knowledge on how to effectively utilize Webex Contact Center's AI capabilities to create self-service automation.
 - Improve the containment rate of your contact center, increasing efficiency and reducing costs.
 - Learn how to create an effective AI Voice solution using Cisco's Webex Connect Bot builder platform and Webex Contact Center Flow Designer.
 - Understand the use of Generative AI to fast-track bot development and save time.
@@ -81,7 +81,7 @@ This mission is designed to provide an in-depth understanding of the Webex AI Ag
 3. Make sure the **Edit** mode at the top is set to **ON**. Then, drag and drop the **Virtual Agent V2** and **DisconnectContact** activity from the left panel onto the canvas.
 
     !!! Note
-        Please make sure to use **VirtualAgentV2** activity and <span style="color: red;">**NOT**</span> **VirtualAgent** also present on the Activity Library for Backward Compatability.
+        Please make sure to use **VirtualAgentV2** activity and <span style="color: red;">**NOT**</span> **VirtualAgent** also present on the Activity Library for Backward Compatibility.
 
     > Connect the **New Phone Contact** output node edge to this **VirtualAgentV2** node
     >

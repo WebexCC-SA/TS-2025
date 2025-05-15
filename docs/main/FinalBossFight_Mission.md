@@ -23,7 +23,7 @@ Your task is to identify and fix the issues causing this behavior. Specifically:
 
 ## Before you start troubleshooting...
 
-1. <span style="color: red;">[IMPORTANT]</span> [Download](https://drive.google.com/drive/folders/1ubgdUQyHJnxFMWc1ecMStl8W0JhA6SAw?usp=drive_link){:target="_blank"} your troublshooting flow from shared folder.
+1. <span style="color: red;">[IMPORTANT]</span> [Download](https://drive.google.com/drive/folders/1ubgdUQyHJnxFMWc1ecMStl8W0JhA6SAw?usp=drive_link){:target="_blank"} your troubleshooting flow from shared folder.
 
 2. In **Search in Drive** line search for **<span class="attendee-id-container">FinalBoss_Flow_<span class="attendee-id-placeholder" data-prefix="FinalBoss_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**. Then download the file to your local drive.
 

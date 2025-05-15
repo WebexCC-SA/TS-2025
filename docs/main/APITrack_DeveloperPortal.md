@@ -65,7 +65,7 @@ APIs streamline operations by automating tasks, integrating systems, and enhanci
 
     ![profiles](../graphics/Lab2/DevPortalLogin.gif)
 
-3. On Menu pannel on the left, scroll down to **API Reference** section and click on **Adress Book**. Observe available API calls
+3. On Menu pannel on the left, scroll down to **API Reference** section and click on **Address Book**. Observe available API calls
 
     !!!Note
         **Address Book Overview**</br>
@@ -144,7 +144,7 @@ APIs streamline operations by automating tasks, integrating systems, and enhanci
 
     ![profiles](../graphics/Lab2/DevPortal_CreateABEntry.gif)
 
-12. Switch to [Webex Control Hub](https://admin.webex.com){:target="_blank"}. Your **Addres Book** configuration page should still be open. **Refresh** the page.
+12. Switch to [Webex Control Hub](https://admin.webex.com){:target="_blank"}. Your **Address Book** configuration page should still be open. **Refresh** the page.
 
 13. But if not open, locate and open your **<span class="attendee-id-container">AddressBook_<span class="attendee-id-placeholder" data-prefix="AddressBook_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**
 
@@ -221,7 +221,7 @@ We will retrieve information about your newly created address book using a GET A
     }
     ```
 
-5. Switch to [Webex Control Hub](https://admin.webex.com){:target="_blank"}. You **Addres Book** configuration page should still be open. **Refresh** the page to validate Description change.
+5. Switch to [Webex Control Hub](https://admin.webex.com){:target="_blank"}. Your **Address Book** configuration page should still be open. **Refresh** the page to validate Description change.
 
 ![profiles](../graphics/Lab2/DevPortal_PUT_ABDescription.gif)
 
@@ -344,7 +344,7 @@ We will retrieve information about your newly created address book using a GET A
     ![profiles](../graphics/Lab2/DevPortal_SearchAPI2.gif)
 
 
-4. Open JSON Path tool [https://jsonpath.com/](https://jsonpath.com/){:target="_blank"} to test your **GraphQL** response. Clear the content from **Document** section and from **JSONPath Query** adress line.
+4. Open JSON Path tool [https://jsonpath.com/](https://jsonpath.com/){:target="_blank"} to test your **GraphQL** response. Clear the content from **Document** section and from **JSONPath Query** address line.
 
 5. Switch to **Developer Portal** and copy the response 
 
@@ -352,7 +352,7 @@ We will retrieve information about your newly created address book using a GET A
   ![profiles](../graphics/Lab2/DevPortal_SearchAPI3.gif)
 
 
-7. Test the following paths by pasting them into **JSONPath Query** adress line one by one:
+7. Test the following paths by pasting them into **JSONPath Query** address line one by one:
 
     >
     > `$.data.taskDetails.tasks[0].id`<span class="copy-static" data-copy-text="$.data.taskDetails.tasks[0].id"><span class="copy" title="Click to copy!"></span></span> - Interaction ID of the call.
@@ -375,4 +375,4 @@ We will retrieve information about your newly created address book using a GET A
 ![profiles](../graphics/Lab2/DevPortal_SearchAPI4.gif)
 
 
-<p style="text-align:center"><strong>Congratulations, you have succesfully completed Introduction to Developer Portal mission! 🎉🎉 </strong></p>
+<p style="text-align:center"><strong>Congratulations, you have successfully completed Introduction to Developer Portal mission! 🎉🎉 </strong></p>

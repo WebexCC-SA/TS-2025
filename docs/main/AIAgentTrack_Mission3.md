@@ -8,7 +8,7 @@ icon: material/medal
 # Mission 3: Seamless AI to Human Agent Handoffs
 
 > !!! Note
-      This task relies on completing Mission 7 of the Fundamental Labs. Ensure that mission is completed to have a fully functional AI Scripted Agent feature in the Contact Center.
+      This task relies on completing Mission 2 of the AI Track. Ensure that mission is completed to have a fully functional AI Scripted Agent feature in the Contact Center.
 
 ## Story
 
@@ -25,7 +25,7 @@ This lab is designed to explore how to pass contextual intelligence from AI Agen
 
 Your mission is to:
 
-1. Configure a smoth handoff to live human agent from AI Agent.
+1. Configure a smooth handoff to live human agent from AI Agent.
 2. Modify Virtual Agent transcript
 3. Configure routing based on last used intent
 4. Use AI Assistant
@@ -77,7 +77,7 @@ Your mission is to:
 
     ![profiles](../graphics/Lab1/5-Agent_Login.gif)
 
-4. Dial the support number assigned to your **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>** channel and during the conversation with the virtual Agent, say, **"Please transfer me to an Agent."** Answer the call on the agent desktop when you receive a ring notification and verify the transciption is passed to Agent Desktop.
+4. Dial the support number assigned to your **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>** channel and during the conversation with the virtual Agent, say, **"Please transfer me to an Agent."** Answer the call on the agent desktop when you receive a ring notification and verify the transcription is passed to Agent Desktop.
 
 5. Once the call is answered, disconnect the call by clicking on the **End** button.
 
@@ -168,7 +168,7 @@ Your mission is to:
 
     ![profiles](../graphics/Lab1/5-Agent_Login.gif)
 
-4. Dial the support number assigned to your **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>** channel and during the conversation with the virtual Agent, say, **"Please transfer me to an Agent."** Answer the call on the agent desktop when you receive a ring notification and verify the transciption is passed to Agent Desktop.
+4. Dial the support number assigned to your **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>** channel and during the conversation with the virtual Agent, say, **"Please transfer me to an Agent."** Answer the call on the agent desktop when you receive a ring notification and verify the transcription is passed to Agent Desktop.
 
     ![profiles](../graphics/Lab2/RT_Desktop.png)
 
@@ -280,7 +280,7 @@ Your mission is to:
 ### Checkpoint: Last Intent Based Routing
     
 1. Make sure your agent is **Available** and if not, login to you Desktop as explained in previous Quick Test (see above)
-2. Make a call to your test number. During your interaction with the Virtual Agent start requesting for an appointement and then request a transfer to a live agent by saying, **"Please transfer me to an Agent."** If the last intent was "Book appointment", you will hear the Text-to-Speech message: **"Routing to an agent skilled at booking an appointment."**. 
+2. Make a call to your test number. During your interaction with the Virtual Agent start requesting for an appointment and then request a transfer to a live agent by saying, **"Please transfer me to an Agent."** If the last intent was "Book appointment", you will hear the Text-to-Speech message: **"Routing to an agent skilled at booking an appointment."**. 
 
     <!-- md:option type:note -->
     
@@ -312,7 +312,7 @@ Your mission is to:
 7. Open Debug tool and open your last call. Click on **VA_Metadata** which is our renames Set Variable. See that metadata from **VirtualAgentV2_<*>.MetaData** was written into **vameta** flow variable we created on **Step 3**.
   ![profiles](../graphics/Lab2/L2M4_Handoff_Analyze&Debug.gif)
 
-8. Copy JSON from debuger and paste it into [https://jsonpath.com/](https://jsonpath.com/){:target="_blank"} Inputs.
+8. Copy JSON from debugger and paste it into [https://jsonpath.com/](https://jsonpath.com/){:target="_blank"} Inputs.
 9. Change Debug mode to Design in Flow Designer and copy the path from Parse node into JSONPath of the [https://jsonpath.com/](https://jsonpath.com/){:target="_blank"}. You should get last intent name as "Book Apppointement"
 
   ![profiles](../graphics/Lab2/L2M4_Handoff_JSONPath.gif)

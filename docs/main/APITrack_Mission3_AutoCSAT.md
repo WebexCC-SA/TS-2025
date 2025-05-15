@@ -188,7 +188,7 @@ Your mission is to:
     >
     > Connect **GraphQL_Query** to this node
     >
-    > We will connct **Set Variable** node in next step
+    > We will connect **Set Variable** node in next step
     >
     > Variable: **JSONResponse**<span class="copy-static" data-copy-text="JSONResponse"><span class="copy" title="Click to copy!"></span></span>
     >
@@ -342,7 +342,7 @@ Your mission is to:
       2. You should be offered a call, click on the accept button. (You may want to mute the mic on both Webex and the Agent Desktop)
       3. End the call from Agent Desktop and you should here an invitation to rate your experience with us on a scale of 1 to 5.
       4. Select **4** or **5** on Webex App keypad.
-3. In your flow, open the debuger and select the latest call from the list (on top of the list).
+3. In your flow, open the debugger and select the latest call from the list (on top of the list).
       1. Trace the steps taken in the flow
       2. Select **GraphQL_Query** and scroll down the details panel on the right-hand side to **Modified Variables**. They should be empty since there are no CSAT scores at the moment you made the first call.
       3. **Case_If_AgentIDEmpty** should exit via **true** node edge as the **GraphQL_Query** had no response, hence the call arrived to your agent via **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Queue">Your_Attendee_ID</span>_Queue<span class="copy" title="Click to copy!"></span></span>** and not via **QueueToAgent** node.
@@ -353,8 +353,8 @@ Your mission is to:
 5. Using Webex App, place another call to your Inbound Channel number **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>**
       1. You should be offered the call, click on the accept button.
       2. If everything set correctly you should see Auto CSAT set to **4.0**
-      3. End the call and select a wrapup code if asked.
-6. In your flow, open the debuger and select the latest call from the list (on top of the list).
+      3. End the call and select a wrap-up code if asked.
+6. In your flow, open the debugger and select the latest call from the list (on top of the list).
       1. Trace the steps taken in the flow
       2. Select **GraphQL_Query** and scroll down the details panel on the right-hand side to **Modified Variables**. You should see that now **agentID** and **AutoCSATVar** have assigned values.
       3. Select **GraphQLResponse**. In details panel on the right-hand side you should see **Modified Variables** has a JSON response.

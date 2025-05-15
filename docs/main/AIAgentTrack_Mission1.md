@@ -44,7 +44,7 @@ Your mission is to:
 
 ## Build
 
-### Creating a Knowldge Base
+### Creating a Knowledge Base
 
 1. <span style="color: red;">[IMPORTANT]</span> [Download](https://drive.google.com/drive/folders/1b8x_om4rQonuJ52wRYif1LPP5qEX4RDI?usp=sharing){:target="_blank"} source file from shared folder.
     
@@ -155,7 +155,7 @@ Your mission is to:
 3. Make sure the **Edit** mode at the top is set to **ON**. Then, drag and drop the **Virtual Agent V2** and **DisconnectContact** activities from the left panel onto the canvas.
 
     !!! Note
-        Please make sure to use **VirtualAgentV2** activity and <span style="color: red;">**NOT**</span> **VirtualAgent** also present on the Activity Library for Backward Compatability.
+        Please make sure to use **VirtualAgentV2** activity and <span style="color: red;">**NOT**</span> **VirtualAgent** also present on the Activity Library for Backward Compatibility.
 
     > Connect the **New Phone Contact** output node edge to this **VirtualAgentV2** node
     >

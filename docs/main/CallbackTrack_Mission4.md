@@ -20,7 +20,7 @@ If a caller who already has a scheduled callback contacts the contact center aga
 2. The flow executes the logic configured in previous missions.</br>
 3. The call is routed to the appropriate queue, but no agents are available.</br>
 4. Since no agents are available, a callback option is offered to the caller.</br>
-5. Once the caller requests for a callback, IVR replies that calback has been scheduled already.</br>
+5. Once the caller requests for a callback, IVR replies that callback has been scheduled already.</br>
 
 ## Mission Details
 
@@ -248,13 +248,13 @@ Your mission is to:
     
 1. Make sure your Agent either **Logged Out** or in **Not Available** state. In this case call will not be assigned to an agent and callback will be proposed to a caller.
 2. Make sure your **<span class="attendee-id-container">Main_Flow_<span class="attendee-id-placeholder" data-prefix="Main_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** is assigned to **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>**. If not, do that (refer to previous very first Mission where this step was explained in details).
-3. Make a call to your Support Number and if success you should hear configured messages and ask to provide a new number for a callback. Because in current lab we are having number limitations we are going to provide a wellknown Cisco Worldwide Support contact number **1 408 526 7209**<span class="copy-static" data-copy-text="+14085267209"><span class="copy" title="Click to copy!"></span></span>
+3. Make a call to your Support Number and if success you should hear configured messages and ask to provide a new number for a callback. Because in current lab we are having number limitations we are going to provide a well known Cisco Worldwide Support contact number **1 408 526 7209**<span class="copy-static" data-copy-text="+14085267209"><span class="copy" title="Click to copy!"></span></span>
 4. While keeping your agent **Not Available**, make another test call to your flow and request for a callback to the same number **1 408 526 7209**<span class="copy-static" data-copy-text="+14085267209"><span class="copy" title="Click to copy!"></span></span>.
 5. You should hear a message configured in **Step 6** of the current mission.
-6. Click on **Analyze** to visualy observe the call flow. Make sure you're viewing latest Published Version.
-7. Review the flow and click on **HTTPRequest_CallBackSearch** where you can cross-launch debuger to that particalar call.
-8. Navigate to **HTTPRequest_CallBackSearch** to see **Modified Variables** at the bottom of right hand side of the debuger. 
-9. Click on **Set Variable**, which is the next step after **HTTPRequest_CallBackSearch**, to see full Search API response which we wrote to **searchresult** flow variable on the **Step 6** of the cusrrent mission configuration. 
+6. Click on **Analyze** to visually observe the call flow. Make sure you're viewing latest Published Version.
+7. Review the flow and click on **HTTPRequest_CallBackSearch** where you can cross-launch debugger to that particular call.
+8. Navigate to **HTTPRequest_CallBackSearch** to see **Modified Variables** at the bottom of right hand side of the debugger. 
+9. Click on **Set Variable**, which is the next step after **HTTPRequest_CallBackSearch**, to see full Search API response which we wrote to **searchresult** flow variable on the **Step 6** of the current mission configuration. 
 
 ![profiles](../graphics/Lab2/L2M3-6.gif)
 

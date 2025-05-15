@@ -277,11 +277,11 @@ A common request for returning customers calling into a contact center is to wor
       1. Using Webex, place a call to your Inbound Channel number **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>**
       2. You should be offered a call, click on the accept button. (You may want to mute the mic on both Webex and the Agent Desktop)
       3. In the Agent Desktop you will see a new field in Call Information section where you can edit the Simulated CSAT.  Enter a value of **2.9**<span class="copy-static" data-copy-text="2.9"><span class="copy" title="Click to copy!"></span></span> and click save.
-      4. After a few moments end the call and select a wrapup code.
+      4. After a few moments end the call and select a wrap-up code.
 3. Using Webex, place another call to your Inbound Channel number **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>**
       1. You should be offered the call, click on the accept button.
       2. Enter a value of **3.7**<span class="copy-static" data-copy-text="3.7"><span class="copy" title="Click to copy!"></span></span> in for Simulated CSAT and click save.
-      3. After a few moments end the call and select a wrapup code.
+      3. After a few moments end the call and select a wrap-up code.
 4. In your Flow:
       1. Open the debugger
       2. Select the first interaction (at the bottom of the list)

@@ -23,7 +23,7 @@ Imagine a customer calls to upgrade their service but faces a 20-minute wait, th
 Your mission is to: </br>
 
 1. Continue to use same flow **Main_Flow_<span class="attendee-id-placeholder">Your_Attendee_ID</span>** </br>
-2. Add aditional callback functionality to your **Main_Flow_<span class="attendee-id-placeholder">Your_Attendee_ID</span>**.
+2. Add additional callback functionality to your **Main_Flow_<span class="attendee-id-placeholder">Your_Attendee_ID</span>**.
 
 
 ## Build

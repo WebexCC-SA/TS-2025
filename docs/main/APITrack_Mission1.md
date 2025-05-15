@@ -88,9 +88,9 @@ Your mission is to:
     >
     > Connect the output node edge from the **Collect Digits** node to this node
     >
-    > In the Expression section write an expresion ***{{CollectPIN.DigitsEntered == '1111'}}***<span class="copy-static" data-copy-text="{{CollectPIN.DigitsEntered == '1111'}}"><span class="copy" title="Click to copy!"></span></span>
+    > In the Expression section write an expression ***{{CollectPIN.DigitsEntered == '1111'}}***<span class="copy-static" data-copy-text="{{CollectPIN.DigitsEntered == '1111'}}"><span class="copy" title="Click to copy!"></span></span>
     
-    <span style="color: orange;">[Optional]</span> You can verify the expresion result by clicking on **Test Expression** icon in the Expresion section
+    <span style="color: orange;">[Optional]</span> You can verify the expression result by clicking on **Test Expression** icon in the Expression section
         
     ![Profiles](../graphics/Lab2/BM1-4-PIN_Expresion.gif)
     
@@ -139,7 +139,7 @@ Your mission is to:
     > 
     > Connect the output node edge from the **HTTP_PUT** node to this node
     >
-    > In the Expression section write an expresion ***{{HTTP_PUT.httpStatusCode == 200}}***<span class="copy-static" data-copy-text="{{HTTP_PUT.httpStatusCode == 200}}"><span class="copy" title="Click to copy!"></span></span>
+    > In the Expression section write an expression ***{{HTTP_PUT.httpStatusCode == 200}}***<span class="copy-static" data-copy-text="{{HTTP_PUT.httpStatusCode == 200}}"><span class="copy" title="Click to copy!"></span></span>
     
     ![Profiles](../graphics/Lab2/BM1-7-HTTPStatus.gif)
 
@@ -235,9 +235,9 @@ Your mission is to:
     > 
     > Connect the output False node edge from the **Condition** Node to **Set Variable**
     > 
-    > In the Expression section write an expresion ***{{EmergencyGV_<span class="attendee-id-placeholder">Your_Attendee_ID</span> == true}}***  
+    > In the Expression section write an expression ***{{EmergencyGV_<span class="attendee-id-placeholder">Your_Attendee_ID</span> == true}}***  
             
-    <details><summary>Optional</summary>You can Verify the expresion result by Clicking on **Test Expression** icon in the Expresion section.</details>
+    <details><summary>Optional</summary>You can Verify the expression result by Clicking on **Test Expression** icon in the Expression section.</details>
         
     ![Profiles](../graphics/Lab2/BM1-Test5-GV.gif)
 

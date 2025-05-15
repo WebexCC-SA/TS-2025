@@ -55,7 +55,7 @@ Flow Templates are designed to empower developers, speed up the development life
     !!! Note 
         Remember to take up the offer from Chrome to save your password
 
-2. This is the **Administration interface** for webex contact center and is also known as the Control Hub. Look for the contact center option in the left pane under **SERVICES – Contact Center** and click it
+2. This is the **Administration interface** for Webex Contact Center and is also known as the Control Hub. Look for the contact center option in the left pane under **SERVICES – Contact Center** and click it
 3. Navigate to **Flows**, click on **Manage Flows** dropdown list and select **Create Flows**
 4. New Tab will be opened. Navigate to **Flow Templates**
 5. Choose **Simple Inbound Call to Queue** template and click **Next**. You can open View Details and to see observe flow structure and read flow description

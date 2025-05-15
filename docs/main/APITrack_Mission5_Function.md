@@ -187,7 +187,7 @@ Your mission is to:
     ></details>
 </br>
 
-6. Perform a test to see how you script preforms by clicking on **Test** pannel below the editor. Provide following data into respective fields. Then click **Test** button.
+6. Perform a test to see how you script preforms by clicking on **Test** panel below the editor. Provide following data into respective fields. Then click **Test** button.
 
     > `lastPurchase`: **17-03-2025**<span class="copy-static" data-copy-text="17-03-2025"><span class="copy" title="Click to copy!"></span></span>
     >
@@ -302,13 +302,13 @@ Your mission is to:
     >
     > Connect **NewPhoneContact** to this HTTP node
     >
-    > We will connct **HTTP Request** node in next step
+    > We will connect **HTTP Request** node in next step
     >
     > Activity Name: **GET_HTTPRequest**<span class="copy-static" data-copy-text="GET_HTTPRequest"><span class="copy" title="Click to copy!"></span></span>
     >
     > Use Authenticated Endpoint: **Off**
     >
-    > Requestt URL: ***https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={{NewPhoneContact.DNIS | slice(2) }}***<span class="copy-static" data-copy-text="https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={{NewPhoneContact.DNIS | slice(2) }}"><span class="copy" title="Click to copy!"></span></span>
+    > Request URL: ***https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={{NewPhoneContact.DNIS | slice(2) }}***<span class="copy-static" data-copy-text="https://674481b1b4e2e04abea27c6e.mockapi.io/flowdesigner/Lab/DynVars?dn={{NewPhoneContact.DNIS | slice(2) }}"><span class="copy" title="Click to copy!"></span></span>
     > 
     > Method: **GET**
     > 
@@ -349,7 +349,7 @@ Your mission is to:
     >
     > Connect **GET_HTTPRequest** to this node
     >
-    > We will connct **Set Variable** node in next step
+    > We will connect **Set Variable** node in next step
     >
     > Variable: **`HTTPResponse`**<span class="copy-static" data-copy-text="HTTPResponse"><span class="copy" title="Click to copy!"></span></span>
     >
@@ -434,7 +434,7 @@ Your mission is to:
 
 3. Switch to Flow Designer and click Debug tab at the bottom and select last interaction (first in the list)
 
-4. Click on **GET_HTTPRequest** and on the right hand side window scoll to the bottom. Check if **Modified Variables** have values assigned.
+4. Click on **GET_HTTPRequest** and on the right hand side window scroll to the bottom. Check if **Modified Variables** have values assigned.
 
 5. Click on **HTTP_Response** to see full HTTP response body in **Modified Variables**.
 
@@ -442,4 +442,4 @@ Your mission is to:
 
     ![Profiles](../graphics/APIFunction/API_Function12.gif)
 
-<p style="text-align:center"><strong>Congratulations, you have succesfully completed Function mission! 🎉🎉 </strong></p>
+<p style="text-align:center"><strong>Congratulations, you have successfully completed Function mission! 🎉🎉 </strong></p>
