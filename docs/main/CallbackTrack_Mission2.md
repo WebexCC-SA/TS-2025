@@ -156,7 +156,7 @@ Your mission is to: </br>
     
 ## Testing
     
-1. Make sure you're logged into the Webex CC Desktop application as an Agent and set the status to **Not Available**. In this case, the call will not be assigned to an agent, and a callback will be proposed to the caller.
+1. Make sure you're logged into the **Agent Desktop** as an Agent and set the status to **Not Available**. In this case, the call will not be assigned to an agent, and a callback will be proposed to the caller.
 2. Make a call to the Support Number and if success you should hear configured messages.
 
 3. When callback is proposed, press 1 on Webex App DialPad to request a callback. 

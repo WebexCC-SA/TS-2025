@@ -96,7 +96,7 @@ Event flows enable a wide range of scenarios, with one common use case being the
     
 ## Testing
     
-1. Make sure you're logged into Webex CC Desktop application as Agent **wxcclabs+agent_ID<span class="attendee-id-placeholder">Your_Attendee_ID</span>@gmail.com** and set status to **Available**.
+1. Make sure you're logged into **Agent Desktop** as Agent **wxcclabs+agent_ID<span class="attendee-id-placeholder">Your_Attendee_ID</span>@gmail.com** and set status to **Available**.
 2. Make a call to the Support Number and if success you should hear Welcome message and then accept the call by agent.
 3. Upon accepting the call, a new browser tab will be opened with the Screen Pop URL configured in **Step 4**.
 3. Switch back to the Agent Desktop. In agent interaction panel change **Who Is Calling?** to any text you like then click **Save** and End the call.

@@ -4,7 +4,7 @@ icon: material/bullseye-arrow
 ---
 
 ## Learning Objectives
-1. Ensure that you have **"POD <span class="attendee-id-placeholder">Your_Attendee_ID</span>.pdf"** file on your desktop with instructions and credentials to access your lab. If you do not, please ask your lab proctor now.
+1. Ensure that you have **"POD <span class="attendee-id-placeholder">Your_Attendee_ID</span>.pdf"** printed copy with instructions and credentials to access your lab. If you do not, please ask your lab proctor now.
 2. Understand your configuration instructions
 3. Familiarize yourself how we will use Google Chrome profiles to simulate various scenarios covered in the next labs.
 
@@ -17,7 +17,7 @@ icon: material/bullseye-arrow
 2. The majority of the configuration in Control Hub is already set up, allowing you to focus primarily on Flow Design. Of course, there may still be some elements to adjust, but these should be minimal, letting you concentrate on building and refining the flow logic rather than spending time on initial setup.
 3. The Agents have been configured for you. You will be performing the rest of the configurations to route voice calls
 4. All your configurations should contain your attendee ID so the lab users don't step over each other's configurations
-5. Each of you has been provided with the phone number to dial (Entry point DN), 1 agents, 1 Supervisor and 1 admin.
+5. Each of you has been provided with the phone number to dial (Entry point DN), 1 Agent, 1 Admin and 1 Supervisor.
 6. We are going to use built-in Cisco Text to Speech for playing all messages in the lab.
 7. Please ask for help when you need it. You can do it by clicking on **"Ask a Question"** or by raising your hand and calling the proctor.
 
@@ -35,7 +35,7 @@ icon: material/bullseye-arrow
 
 > Business Hours: **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Bussiness_Hours">Your_Attendee_ID</span>_Bussiness_Hours<span class="copy"></span></span>**
 
-> Webex App has been pre-installed on your Lab PC
+> Webex App should be pre-installed on your laptop. If not, download Webex App from <a href="https://www.webex.com/downloads.html" target="_blank">https://www.webex.com/downloads.html</a> 
 
 > Assigned Inbound Channel Number: **Provided by Lab Instructor**
 
@@ -47,11 +47,11 @@ More pre-configured entities will be mentioned during the lab missions if they h
 
 #### Agent Desktop
 
-Use Agent Desktop application ![profiles](../graphics/overview/Desktop_Icon40x40.png) pre-installed on your workstation to login your agent. In addition, Desktop profile was configured in a way where you don't need to select a Telephony line. By default only Desktop Audio (WebRTC) has been enabled.
+Use <a href="https://desktop.wxcc-us1.cisco.com/" target="_blank">https://desktop.wxcc-us1.cisco.com/</a> to login your agent. In addition, Desktop profile was configured in a way where you don't need to select a Telephony line. By default only Desktop Audio (WebRTC) has been enabled.
 
 
 #### Calling to Contact Center
-All call to Webex Contact center should be done from Webex App which has been pre-installed for you as well as pre-logined to it.
+All calls to Webex Contact center should be done from Webex App. Use Supervisor account provided to you to login to Webex App.
 To make a test just open Webex App and dial the provided Support Number assigned to you.
 
    ![profiles](../graphics/Lab1/WxApp_Test.gif)
