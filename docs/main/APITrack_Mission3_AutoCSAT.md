@@ -16,7 +16,7 @@ A common request for returning customers calling into a contact center is to wor
 
 ## Call Flow Overview
 1. New call comes into the flow
-2. Call the Search API to find the last agent with which they had a good AutoCSAT
+2. Call the Search API to find the last agent with whom they had a good AutoCSAT
 3. If the AutoCSAT is greater or equal **4** and agent is available, we will route the call to that agent
 4. If the agent is not available or if no recent good AutoCSAT scores exist for the caller, we will route the call to the queue for the next available agent. 
 
@@ -99,7 +99,7 @@ Your mission is to:
     >
     > Connector: **WxCC_API**
     > 
-    > Path: **/search**<span class="copy-static" data-copy-text="/search"><span class="copy" title="Click to copy!"></span></span>
+    > Request Path: **/search**<span class="copy-static" data-copy-text="/search"><span class="copy" title="Click to copy!"></span></span>
     > 
     > Method: **POST**
     > 
@@ -175,6 +175,8 @@ Your mission is to:
     > - Output Variable: `agentID`<span class="copy-static" data-copy-text="agentID"><span class="copy" title="Click to copy!"></span></span>
     > - Path Expression: `$.data.taskDetails.tasks[0].owner.id`<span class="copy-static" data-copy-text="$.data.taskDetails.tasks[0].owner.id"><span class="copy" title="Click to copy!"></span></span>
     >
+    > Click **Add New** button to add another Output Variable as follows:
+    >
     > - Output Variable: `AutoCSATVar`<span class="copy-static" data-copy-text="AutoCSATVar"><span class="copy" title="Click to copy!"></span></span>
     > - Path Expression: `$.data.taskDetails.tasks[0].doubleGlobalVariables.value`<span class="copy-static" data-copy-text="$.data.taskDetails.tasks[0].doubleGlobalVariables.value"><span class="copy" title="Click to copy!"></span></span>
     >
@@ -240,15 +242,15 @@ Your mission is to:
     >
     > Agent Lookup Type: **ID**<span class="copy-static" data-copy-text="ID"><span class="copy" title="Click to copy!"></span></span>
     >
-    > Set Contact Priority: **True**
+    > Enable the toggle **Set Contact Priority**
     >
-    > Select Static Priority
+    > Select **Static Priority**
     >
     > Static Priority Value: **P1**
     >
     > Reporting Queue: **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Queue">Your_Attendee_ID</span>_Queue<span class="copy" title="Click to copy!"></span></span>**
     >
-    > Park Contact if Agent Unavailable: **False**
+    > Leave the toggle **Park Contact if Agent Unavailable** disabled
     >
     > Recovery Queue: **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Queue">Your_Attendee_ID</span>_Queue<span class="copy" title="Click to copy!"></span></span>**
     >
@@ -285,7 +287,7 @@ Your mission is to:
     >
     > Subflow Label: **Latest**
     >
-    > Enable automatic updates: **True**
+    > Leave **Enable automatic updates** check box, checked
     >
     > Subflow Input Variables: **None**
     >
@@ -299,6 +301,8 @@ Your mission is to:
     > Connect **AgentDisconnect** event node edge this node
     >
     > Destination Type: **Flow**
+    >
+    > Select Static Flow
     >
     > Flow: **CCBU_PostCallSurvey_AutoCSAT**<span class="copy-static" data-copy-text="CCBU_PostCallSurvey_AutoCSAT"><span class="copy" title="Click to copy!"></span></span>
     >
@@ -340,7 +344,7 @@ Your mission is to:
 2. On your Agent Desktop, set your status to available
       1. Using Webex, place a call to your Inbound Channel number **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Channel">Your_Attendee_ID</span>_Channel<span class="copy" title="Click to copy!"></span></span>**
       2. You should be offered a call, click on the accept button. (You may want to mute the mic on both Webex and the Agent Desktop)
-      3. End the call from Agent Desktop and you should here an invitation to rate your experience with us on a scale of 1 to 5.
+      3. End the call from Agent Desktop and you should hear an invitation to rate your experience with us on a scale of 1 to 5.
       4. Select **4** or **5** on Webex App keypad.
 3. In your flow, open the debugger and select the latest call from the list (on top of the list).
       1. Trace the steps taken in the flow

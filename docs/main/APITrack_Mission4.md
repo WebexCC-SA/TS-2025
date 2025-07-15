@@ -80,7 +80,7 @@ Your mission is to:</br>
     >
     > Connector: **WxCC_API**
     > 
-    > Path: **/search**
+    > Request Path: **/search**
     > 
     > Method: **POST**
     > 
@@ -188,10 +188,11 @@ Your mission is to:</br>
     >
     > Queue: **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_Queue">Your_Attendee_ID</span>_Queue<span class="copy" title="Click to copy!"></span></span>**
     >
-    > Select Static Priority
+    > Enable the toggle **Set Contact Priority**
+    >
+    > Select **Static Priority**
     >
     > Static Priority Value: **P1**
-    >
 
 7.  Add a **Subflow** node
 
@@ -203,7 +204,7 @@ Your mission is to:</br>
     >
     > Subflow Label: **Latest**
     >
-    > Enable automatic updates: **True**
+    > Leave **Enable automatic updates** check box, checked
     >
     > Subflow Input Variables: **None**
     >

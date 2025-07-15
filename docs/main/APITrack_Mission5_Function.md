@@ -46,10 +46,9 @@ Your mission is to:
 
     ![Profiles](../graphics/APIFunction/API_Function1.gif)
 
-3. Switch **Read-Only** mode from **Off** to **On** and add following variables by clicking **Add Input Variables**:
+3. Add following variables by clicking **Add Input Variables**:
 
 
- 
     - Last purchase date variable:
     
       >
@@ -373,7 +372,7 @@ Your mission is to:
     >
     >> Output Variable: **`personalizedMessage`**<span class="copy-static" data-copy-text="personalizedMessage"><span class="copy" title="Click to copy!"></span></span>
     >>
-    >> Path Expression **`$.personalizedMessage`**<span class="copy-static" data-copy-text="personalizedMessage"><span class="copy" title="Click to copy!"></span></span>
+    >> Path Expression **`$.personalizedMessage`**<span class="copy-static" data-copy-text="$.personalizedMessage"><span class="copy" title="Click to copy!"></span></span>
 
     ![Profiles](../graphics/APIFunction/API_Function9.gif)
 

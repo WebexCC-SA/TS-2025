@@ -36,7 +36,7 @@ Your mission is to:
 > </details>
 
 
-## Steps
+## Build
 
 1. Switch to Control Hub, then navigate to **Flows**, click on **Manage Flows** dropdown list and select **Create Flows**
 
@@ -55,7 +55,7 @@ Your mission is to:
     - All **Play Message** and **Play Music** nodes have been preconfigured to play TTS messages taken from respective API response
     - **BusinessHours_os2** node set to bussinesshours variable which is your business hour entity **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Bussiness_Hours**
     - **QueueContact_a62** node set to queue variable which is your queue entity **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Queue**
-    - Some **GoTo** nodes are configured to use variables and some have statice values. We will adjust them while going through further steps. 
+    - Some **GoTo** nodes are configured to use variables and some have static values. We will adjust them while going through further steps. 
 
     ![Profiles](../graphics/Lab2/BM2-7-ObserveFlow.gif)
 

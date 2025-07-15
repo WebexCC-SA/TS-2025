@@ -203,7 +203,7 @@ We will retrieve information about your newly created address book using a GET A
       "name": "YourAddressBook_Name",
       "id": "YouAddressBook_ID",
       "parentType": "ORGANIZATION",
-      "description": "Testing PUT requests from Develeper Portal"
+      "description": "Testing PUT requests from Developer Portal"
     }
     ```
     > 
