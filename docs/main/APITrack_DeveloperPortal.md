@@ -5,7 +5,7 @@ icon: material/medal
 
 
 
-# Using Webex Contact Center Developer Portal
+# Introduction to Developer Portal
 
 ## Story
 
@@ -75,7 +75,7 @@ APIs streamline operations by automating tasks, integrating systems, and enhanci
 
     ![profiles](../graphics/Lab2/DevPortal_TryOut.gif)
 
-5. Clear **Request Body** content. Paste the following body and replace the *<Your_Attendee_ID>* with your **attendee ID**. Click on **Run**.
+5. Clear **Request Body** content. Paste the following body and replace the *`<Your_Attendee_ID>`* with your **attendee ID**. Click on **Run**.
 
     > 
     > Request Body:
@@ -116,7 +116,7 @@ APIs streamline operations by automating tasks, integrating systems, and enhanci
 
 10. Click on **Create a new Address Book Entry**, then switch to **Try Out** tab within the same page. 
 
-11. In the **Parameters** section paste **ID** you copied on **Step 8** of the current mission.
+11. In the **Parameters** section paste **ID** you copied on **Step 8** of the current mission into **addressBookId** field.
 
 12. Clear **Request Body** content and paste the following body, then click on **Run** button.
 
