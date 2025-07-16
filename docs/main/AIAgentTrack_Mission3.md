@@ -40,9 +40,9 @@ Your mission is to:
 
 2. In **Control Hub** select **Contact Center** from the left panel and then navigate to Flows from the left panel. Search and open your flow **<span class="attendee-id-container">TaskBot_Flow_<span class="attendee-id-placeholder" data-prefix="TaskBot_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**. 
 
-3. Switch the Edit button to **On** to enable Edit mode in the flow builder then drag and drop following nodes:
+3. Switch the Edit button to **On** to enable Edit mode in the flow builder then drag and drop **Queue Contact** and **Play Music** nodes:
 
-    - **Queue Contact** activity onto the Flow from the left side panel
+    - **Queue Contact**
 
       >
       > Connect the **Escalated** path from the **Virtual Agent V2** activity to the **Queue Contact** activity.
@@ -59,7 +59,7 @@ Your mission is to:
       >
       > Create a loop by connecting the Play Music activity back to itself - to create a music loop, following the diagram provided.
       >
-      > Connect the **Failure** path from the **Play Music** activity to the **Disconnect Contact** activity.
+      > Connect the **Undefined Error** path from the **Play Music** activity to the **Disconnect Contact** activity.
       > 
       > Music File: **defaultmusic_on_hold.wav**<span class="copy-static" data-copy-text="defaultmusic_on_hold.wav"><span class="copy" title="Click to copy!"></span></span>
       >
@@ -107,11 +107,11 @@ Your mission is to:
 
     > Connect **AgentAnswer** event handler to *Condition* activity and set the Expression to **{{Transcription_required}}**<span class="copy-static" title="Click to copy!" data-copy-text="{{Transcription_required}}"><span class="copy"></span></span>
     >
-    > Connect **Condition** True path to **Media Start Stream** activity
+    > Connect **Condition** True path to **Start Media Stream** activity
     >
     > Connect **Condition** False path to **EndFlow** activity
     >
-    > Connect **Media Start Stream** activity to **EndFlow** activity
+    > Connect **Start Media Stream** activity to **EndFlow** activity
 
 5. **Validate** and **Publish** the flow. In popped up window click on dropdown menu to select **Latest** label, then click **Publish**.
 
@@ -256,7 +256,7 @@ Your mission is to:
     >
     > Connect the **False** output from the **Condition** activity to the **Queue Contact** activity
     > 
-    > Condition : **{{ last_intent == "Book appointment" }}**
+    > Expression : **{{ last_intent == "Book appointment" }}**
 
 7. Add **Play Message**: 
     
@@ -307,18 +307,18 @@ Your mission is to:
     
         "Please transfer me to an agent "
 
-5. Answer the call on the agent desktop when it rings.
-6. Go back to your flow and click on **Analyze** tab at the bottom of the canvas. Observe the last call behavior.
-7. Open Debug tool and open your last call. Click on **VA_Metadata** which is our renames Set Variable. See that metadata from **VirtualAgentV2_<*>.MetaData** was written into **vameta** flow variable we created on **Step 3**.
+3. Answer the call on the agent desktop when it rings.
+4. End the call and go back to your flow and click on **Analyze** tab at the bottom of the canvas. Observe the last call behavior.
+5. Open Debug tool and open your last call. Click on **VA_Metadata** which is our renames Set Variable. See that metadata from **VirtualAgentV2_<*>.MetaData** was written into **vameta** flow variable we created on **Step 3**.
   ![profiles](../graphics/Lab2/L2M4_Handoff_Analyze&Debug.gif)
 
-8. Copy JSON from debugger and paste it into [https://jsonpath.com/](https://jsonpath.com/){:target="_blank"} Inputs.
-9. Change Debug mode to Design in Flow Designer and copy the path from Parse node into JSONPath of the [https://jsonpath.com/](https://jsonpath.com/){:target="_blank"}. You should get last intent name as "Book Apppointement"
+6. Copy JSON from debugger and paste it into [https://jsonpath.com/](https://jsonpath.com/){:target="_blank"} inputs.
+7. Change Debug mode to Design in Flow Designer and copy the path from Parse node into JSONPath of the [https://jsonpath.com/](https://jsonpath.com/){:target="_blank"}. You should get last intent name as "Book Apppointement"
 
   ![profiles](../graphics/Lab2/L2M4_Handoff_JSONPath.gif)
 
 ### Checkpoint: AI assistant
-1. Click on the AI assistant icon located on the top left navigation panel.
+1. Click on the AI assistant icon located on the top right navigation pane in Agent Desktop.
 
     ![profiles](../graphics/Lab2/L2M4_checkAIIcon.gif)
 

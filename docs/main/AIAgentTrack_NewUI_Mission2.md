@@ -165,12 +165,12 @@ In this step, we will learn how to add new intents and entities to enhance the b
     ![Profiles](../graphics/AI_Track/AIScripted_AddUtterance.gif) 
 
 
-3. Click on **+ Link** and add **patient phone number** as an entity.
+3. Click on **+ Link** button on the right side under **Slots (optional)** and add **patient phone number** as an entity.
 
     >
     > Check the **Required** checkbox 
     >
-    > Select the template key as **askPhoneNumber**, which will be used to prompt the patient for their phone number.
+    > Select the template key as **askPhoneNumber** from **Response** drop down, which will be used to prompt the patient for their phone number.
     
 
 4. Again, click on **+ Link** and add **patient dob** (date of birth) 
@@ -183,7 +183,7 @@ In this step, we will learn how to add new intents and entities to enhance the b
       ![Profiles](../graphics/AI_Track/AIScripted_AddLinkEntity.gif) 
 
 
-6. On the same page in **Response** section at the bottom, click on **Select a response** drop down list and scroll down to **Create new**.
+5. On the same page in **Response** section at the bottom, click on **Select a response** drop down list and scroll down to **Create new**.
 
     > 
     > Template key: **ReferralResp**<span class="copy-static" title="Click to copy!" data-copy-text="ReferralResp"><span class="copy"></span></span>
@@ -194,18 +194,19 @@ In this step, we will learn how to add new intents and entities to enhance the b
     >>  
     >> Click on **+** next to **Default (Web)** and select **Voice**
     >>
-    >> In the Text section replace the text with: ***Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?***<span class="copy-static" title="Click to copy!" data-copy-text="Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?"><span class="copy"></span></span>
+    >> In the Text section replace the text with: ***Thanks for your call. Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?***<span class="copy-static" title="Click to copy!" data-copy-text="Thanks for your call. Your request has been logged and will be reviewed by our team. You will receive a callback once it's approved. Is there anything else I can assist you with?"><span class="copy"></span></span>
     >
     > Click on **Create**.
 
- 7. Click on **Add**.
- 8. Click on the **Save Changes** button to confirm the changes. Make the bot live by clicking on the **Publish** button. Add a version name on pop-up window and click **Publish** again. 
+ 6. Click on **Add**.
+ 7. Click on the **Save Changes** button to confirm the changes. Make the bot live by clicking on the **Publish** button. Add a version name on pop-up window and click **Publish** again. 
 
      ![Profiles](../graphics/AI_Track/AIScripted_AddResponse.gif) 
 
 
-9. Use the **Preview** feature to test the bot flow with the input query: ***I need a referral for a cardiologist***<span class="copy-static" title="Click to copy!" data-copy-text="I need a referral for a cardiologist"><span class="copy"></span></span>.</br>
-10. You can also test this interaction in voice mode by dialing the Supported Number assigned to your pod.
+8. Use the **Preview** feature to test the bot flow with the input query: ***I would like a referral for a cardiologist***<span class="copy-static" title="Click to copy!" data-copy-text="I would like a referral for a cardiologist"><span class="copy"></span></span>.</br>
+
+9. You can also test this interaction in voice mode by dialing the Supported Number assigned to your pod.
 
     ![Profiles](../graphics/AI_Track/AIScripted_NewIntentPreview.gif) 
 

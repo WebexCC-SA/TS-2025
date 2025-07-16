@@ -8,7 +8,7 @@ icon: material/medal
 # Mission 4: Preventing Callback duplication
 
 > !!! Note
-      This task relies on completing Mission 3 of Fundamental Labs. Ensure that mission is completed to have a fully functional callback feature in your flow.
+      This task relies on completing Mission 3 of Core Track. Ensure that mission is completed to have a fully functional callback feature in your flow.
 
 
 ## Story 

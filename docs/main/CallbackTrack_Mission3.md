@@ -190,7 +190,7 @@ Your mission is to:
     >
     > Connect the **OnGlobalError** output edge node to this node
     > 
-    > Use Authentication Endpoint: **On**
+    > Use Authenticated Endpoint: **On**
     >
     > Connector: **WxCC_API**
     >

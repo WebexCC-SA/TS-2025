@@ -5,10 +5,10 @@ icon: material/medal
 
 
 
-# Mission 1: AI Autonomous Agent in Action.
+# Mission 1: Mission 1: AI in Action (Autonomous Agent).
 
 ## <span style="color: blue;">**Recommendation**</span></summary>
-**If the AI Agent feature is already enabled on your Gold Tenant via the Beta Portal, we recommend using it there instead of the shared environment. This helps avoid tenant limitations, such as the maximum of 100 configurable AI Agents.**
+**If the AI Agent feature is already enabled on your Gold Tenant, we recommend using it there instead of the shared environment. This helps avoid tenant limitations, such as the maximum of 100 configurable AI Agents.**
 
 **<details><summary>Good to Know <span style="color: orange;">[Optional]</span></summary>**
 
@@ -24,15 +24,18 @@ The Autonomous AI Agent for performing actions can handle various tasks, includi
 
 ## Story
 
-As a visitor to Dallas, you want to quickly find restaurants offering various international cuisines in the city and place dinner reservations without having to call the restaurant. 
+As a visitor to Singapore, you want to quickly find restaurants offering various international cuisines in the city and place dinner reservations without having to call the restaurant. 
 
 ### Call Flow Overview
 
 1. A new call enters the flow. </br>
-2. The caller asks about restaurants in Dallas.</br>
+2. The caller asks about restaurants in Singapore.</br>
 3. The AI agent asks about the caller's cuisine preference and provides a recommendation.</br>
 4. The AI agent offers to place a reservation for the caller. It then proceeds to collect reservation details, such as name, number of guests, etc.</br>
-5. The AI agent submits the reservation and sends a confirmation SMS to the caller.</br>
+5. The AI agent submits the reservation and sends a confirmation SMS (US numbers only) to the caller.</br>
+
+    !!! Note
+        SMS confirmation should work well if you do current mission on your Gold Tenant.
 
 ## Mission overview
 Your mission is to:
@@ -105,7 +108,7 @@ Your mission is to:
     - Name of the restaurant or pub
     - Customer name for the reservation 
     - Phone number
-    2. Once the reservation is complete, let the user know a confirmation will be send via sms to their mobile, including the address of the restaurant.
+    2. Once the reservation is complete, let the user know a confirmation will be send via sms (US numbers only) to their mobile, including the address of the restaurant. 
     
     ##Completion:
     •	Ask if the user needs additional help before ending.
@@ -118,7 +121,7 @@ Your mission is to:
 
     ![Profiles](../graphics/Lab1/AITrack_AIAgentCreate.gif)
 
-14. Switch to the **Actions** tab and click the **New action** button. Proceed to name the action **dinner_reservation**, add a description and select the action scope option called **Slot filling and fulfillment**. 
+14. Switch to the **Actions** tab and click the **New action** button. Proceed to name the action **dinner_reservation**, add a description **"Dinner reservation action"**<span class="copy-static" title="Click to copy!" data-copy-text="Dinner reservation action"><span class="copy"></span></span> and select the action scope option called **Slot filling and fulfillment**. 
 
 15. Create new input entities for the data required to place a reservation, these are the details for each entity: 
 
@@ -138,7 +141,9 @@ Your mission is to:
 
     ![Profiles](../graphics/Lab1/AITrack_AIAgent_Action.gif)
 
-14. Click on **Preview** to test your AI Agent and ask for a restaurant recommendation and place a dinner reservation. 
+17. Click **-> Add** and then **Publish**
+
+18. Click on **Preview** to test your AI Agent and ask for a restaurant recommendation and place a dinner reservation. 
 
     ![Profiles](../graphics/Lab1/AITrack_AIAgentPreview2.gif)
 
@@ -192,7 +197,7 @@ Your mission is to:
       >
       > Create a loop by connecting the Play Music activity back to itself - to create a music loop, following the diagram provided.
       >
-      > Connect the **Failure** path from the **Play Music** activity to the **Disconnect Contact** activity.
+      > Connect the **Undefined Error** path from the **Play Music** activity to the **Disconnect Contact** activity.
       > 
       > Music File: **defaultmusic_on_hold.wav**
       >
@@ -222,7 +227,10 @@ Your mission is to:
 
     ![profiles](../graphics/Lab1/5-Agent_Login.gif)
 
-4. Dial the support number assigned to your **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Channel** channel, and during the conversation with the virtual agent, ask about restaurants, bars or tourist attractions in Dallas. Test the reservation action by providing all the details required by the AI Agent, you should receive a confirmation SMS (US numbers only). 
+4. Dial the support number assigned to your **<span class="attendee-id-placeholder">Your_Attendee_ID</span>_Channel** channel, and during the conversation with the virtual agent, ask about restaurants, bars or tourist attractions in Singapore. Test the reservation action by providing all the details required by the AI Agent, you should receive a confirmation SMS (US numbers only). 
+
+!!! Note
+        SMS confirmation should work well if you do current mission on your Gold Tenant.
 
 5. Any time during conversation request to connect you with a live agent. The call will be transferred to your agent.
 

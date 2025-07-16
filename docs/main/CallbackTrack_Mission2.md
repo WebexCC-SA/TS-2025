@@ -69,12 +69,12 @@ Your mission is to: </br>
     > Click the Add Text-to-Speech Message button and paste text: ***Please enter your 11 digits phone number to which we should call you back.***<span class="copy-static" title="Click to copy!" data-copy-text="Please enter your 11 digits phone number to which we should call you back."><span class="copy"></span></span>
     >
     > Delete the Selection for Audio File
-    >   
+    > 
+    > Check **Make Prompt Interruptible**
+    >  
     > Advanced Settings:
     >
     >> No-Input Timeout  **5** 
-    >>
-    >> Make Prompt Interruptible: **True**
     >>
     >> Minimum Digits: **11**
     >>
