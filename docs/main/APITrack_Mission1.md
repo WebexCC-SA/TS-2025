@@ -7,6 +7,9 @@ icon: material/medal
 
 # Mission 1: HTTP API POST to Control Hub (Emergency config change)
 
+!!! Note
+    The testing section of this mission depends on the successful completion of Mission 1 from the Core Track. Please ensure that Mission 1 is completed before attempting to test the emergency functionality in the Contact Center.
+
 ## Story
 
 Consider a scenario where a supervisor needs ability to change routing decision during an emergency without accessing admin portal. It can be done by changing the **Default Value** of GlobalVariable via API PUT call from False to True and use Condition in main IVR script to do routing decision. 
