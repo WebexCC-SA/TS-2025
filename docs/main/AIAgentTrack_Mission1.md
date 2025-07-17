@@ -119,7 +119,7 @@ Your mission is to:
 
     ![Profiles](../graphics/Lab1/AITrack_AIAgentCreate.gif)
 
-14. Switch to the **Actions** tab and click the **New action** button. Proceed to name the action **dinner_reservation**, add a description **"Dinner reservation action"**<span class="copy-static" title="Click to copy!" data-copy-text="Dinner reservation action"><span class="copy"></span></span> and select the action scope option called **Slot filling and fulfillment**. 
+14. Switch to the **Actions** tab and click the **New action** button. Proceed to name the action **dinner_reservation****<span class="copy-static" title="Click to copy!" data-copy-text="dinner_reservation"><span class="copy"></span></span>, add a description **"Dinner reservation action"**<span class="copy-static" title="Click to copy!" data-copy-text="Dinner reservation action"><span class="copy"></span></span> and select the action scope option called **Slot filling and fulfillment**. 
 
 15. Create new input entities for the data required to place a reservation, these are the details for each entity: 
 
