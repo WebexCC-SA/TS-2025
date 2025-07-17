@@ -40,7 +40,7 @@ As a visitor to Singapore, you want to quickly find restaurants offering various
 ## Mission overview
 Your mission is to:
 
-1. Create a knowledge base (KB) and AI agent to provide answers about Richardson, including tourist attractions, restaurants, bars, and directions from the Cisco Office in Richardson.</br>
+1. Create a knowledge base (KB) and AI agent to provide answers about Singapore, including tourist attractions, restaurants, bars, and directions from the Cisco Office in Singapore.</br>
 2. Configure the AI agent with an action to place a dinner reservation.</br>
 
 ---
@@ -52,7 +52,7 @@ Your mission is to:
 1. <span style="color: red;">[IMPORTANT]</span> [Download](https://drive.google.com/drive/folders/1b8x_om4rQonuJ52wRYif1LPP5qEX4RDI?usp=sharing){:target="_blank"} source file from shared folder.
     
     > 
-    > **Richardson_Tourist_Guide.txt** - file contains information for tourists like places to visit, restaurants, pubs etc. and how to reach those places from the Cisco Office in Richardson.
+    > **Singapore_Tourist_Guide.txt** - file contains information for tourists like places to visit, restaurants, pubs etc. and how to reach those places from the Cisco Office in Singapore.
     >
 
 2. Login into [Webex Control Hub](https://admin.webex.com){:target="_blank"} by using your Admin profile **<span class="attendee-id-container">wxcclabs+admin_ID<span class="attendee-id-placeholder" data-prefix="wxcclabs+admin_ID" data-suffix="@gmail.com">Your_Attendee_ID</span>@gmail.com<span class="copy" title="Click to copy!"></span></span>**. You will see another login screen with OKTA on it where you may need to enter the email address again and the password provided to you.
@@ -65,11 +65,9 @@ Your mission is to:
 
 5. Click **Create Knowledge Base**, provide Knowledge base name as **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_AI_KB">Your_Attendee_ID</span>_AI_KB<span class="copy" title="Click to copy!"></span></span>**, then click **Create**.
 
-    ![Profiles](../graphics/Lab1/L1M7_AIKBCreate.gif)
+6. Click **Add File** or drag and drop file **Singapore_Tourist_Guide.txt** you downloaded from external drive on **Step 1**. Then click **Process Files**.
 
-6. Click **Add File** or drag and drop file **Richardson_Tourist_Guide.txt** you downloaded from external drive on **Step 1**. Then click **Process Files**.
-
-    ![Profiles](../graphics/Lab1/L1M7_AIKBFileUpload.gif)
+    ![Profiles](../graphics/Lab1/L1M7_AIKBCreate+Upload_Singapore.gif)
 
 7. Navigate to **Dashboard** from the right-hand side menu panel and click **Create Agent**
 8. Select **Start from Scratch** and click **Next**
@@ -85,7 +83,7 @@ Your mission is to:
     >
     > Knowledge base: **<span class="attendee-id-container"><span class="attendee-id-placeholder" data-suffix="_AI_KB">Your_Attendee_ID</span>_AI_KB<span class="copy"></span>**
     > 
-    > Agent's goal: ***Assist users with finding the top restaurants, best pubs & bars and tourist attractions in Richardson. Help users place reservations for dinner to one of the top restaurants in the knowledge base. Maintain a polite, and user-friendly tone throughout.***<span class="copy-static" title="Click to copy!" data-copy-text="Assist users with finding the top restaurants, best pubs & bars and tourist attractions in Richardson. Help users place reservations for dinner to one of the top restaurants in the knowledge base. Maintain a polite, and user-friendly tone throughout."><span class="copy"></span></span>
+    > Agent's goal: ***Assist users with finding the top restaurants, best pubs & bars and tourist attractions in Singapore. Help users place reservations for dinner to one of the top restaurants in the knowledge base. Maintain a polite, and user-friendly tone throughout.***<span class="copy-static" title="Click to copy!" data-copy-text="Assist users with finding the top restaurants, best pubs & bars and tourist attractions in Singapore. Help users place reservations for dinner to one of the top restaurants in the knowledge base. Maintain a polite, and user-friendly tone throughout."><span class="copy"></span></span>
 
 11. Once the agent is created, add the **Instructions** to orchestrate how the AI Agent will execute the actions. Here are the details: 
     
