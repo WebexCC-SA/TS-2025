@@ -40,9 +40,9 @@ Your mission is to:
 
 ## Building Function 
 
-1. Switch to Control Hub, then navigate to **Functions**, click on **Create a function** then select **Create a function** from drop down list. 
+1. Switch to Control Hub, then navigate to **Functions**, click on **Create a function**.t. 
 
-2. New Tab will be opened. Select **Start Fresh** and provide name **<span class="attendee-id-container">Function_<span class="attendee-id-placeholder" data-prefix="Function_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** then click **Create Function**.
+2. New Tab will be opened. Select **Start Fresh** and provide name **<span class="attendee-id-container">Function_<span class="attendee-id-placeholder" data-prefix="Function_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**. Leave **Function Language** as **JavaScript**, then click **Create Function**.
 
     ![Profiles](../graphics/APIFunction/API_Function1.gif)
 
@@ -57,9 +57,7 @@ Your mission is to:
       > Type: **String**
       >
       > Default Value: *empty*
-      >
-      > Variable Value: *put space character*
-
+   
     - Customer pending request variable:
     
       >
@@ -68,8 +66,6 @@ Your mission is to:
       > Type: **String**
       >
       > Default Value: *empty*
-      >
-      > Variable Value: *put space character*
 
     - Expected resolution date variable:
     
@@ -79,8 +75,6 @@ Your mission is to:
       > Type: **String**
       >
       > Default Value: *empty*
-      >
-      > Variable Value: *put space character*
 
     - Outstanding account balance variable:
     
@@ -90,10 +84,8 @@ Your mission is to:
       > Type: **String**
       >
       > Default Value: *empty*
-      >
-      > Variable Value: *put space character*
 
-4. Add output variable **personalizedMessage**<span class="copy-static" data-copy-text="personalizedMessage"><span class="copy" title="Click to copy!"></span></span> in **Output Variable Definition** field.
+4. Add output variable **personalizedMessage**<span class="copy-static" data-copy-text="personalizedMessage"><span class="copy" title="Click to copy!"></span></span> in **Output Variable Definition** field.</br>
 
     ![Profiles](../graphics/APIFunction/API_Function2.gif)
 
