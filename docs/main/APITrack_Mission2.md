@@ -98,7 +98,7 @@ Your mission is to:
     >
     > Static Flow
     >
-    > Flow: **CLTS_ErrorHandling_Flow**
+    > Flow: **CCBU_ErrorHandling_Flow**
     >
     > Choose Version Label: **Latest**
     
@@ -108,7 +108,7 @@ Your mission is to:
     >
     > Static Entry Point
     >
-    > Entry Point: **CLTS_ErrorHandling_Channel**
+    > Entry Point: **CCBU_ErrorHandling_Channel**
 
  
 11. Repeat node settings in **Step 9** for **GoTo_uyn**
