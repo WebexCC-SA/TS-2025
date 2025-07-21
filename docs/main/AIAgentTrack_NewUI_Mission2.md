@@ -136,9 +136,9 @@ In this step, we will learn how to update bot responses and test these changes, 
     >
     > Select the **Welcome message** in **Default message**
     >
-    > Update the text to ***"Welcome to Cumulus Healthcare. How may I assist you today?"***<span class="copy-static" title="Click to copy!" data-copy-text="Welcome to Cumulus Healthcare. How may I assist you today?"><span class="copy"></span></span> for the Default (web) channel.
+    > Update the text to ***"Welcome to Cumulus Hospital's appointment management system. Feel free to request for booking or cancelation of appointment."***<span class="copy-static" title="Click to copy!" data-copy-text="Welcome to Cumulus Hospital's appointment management system. Feel free to request for booking or cancelation of appointment."><span class="copy"></span></span> for the Default (web) channel.
     >
-    > Switch to the Voice Channel and update the text to ***"Welcome to Cumulus Healthcare. How may I assist you today?"***<span class="copy-static" title="Click to copy!" data-copy-text="Welcome to Cumulus Healthcare. How may I assist you today?"><span class="copy"></span></span>
+    > Switch to the Voice Channel and update the text to ***"Welcome to Cumulus Hospital's appointment management system. Feel free to request for booking or cancelation of appointment."***<span class="copy-static" title="Click to copy!" data-copy-text="Welcome to Cumulus Hospital's appointment management system. Feel free to request for booking or cancelation of appointment."><span class="copy"></span></span>
     >
     > Click on the **Save** button to confirm the changes. Make the bot live by clicking on the **Publish** button. Add a version name on pop-up window and click **Publish** again. 
 
