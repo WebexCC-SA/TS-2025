@@ -227,7 +227,7 @@ Your mission is to:
 
 4. Now, let’s get to the fun part. Open the **<span class="attendee-id-container">Main_Flow_<span class="attendee-id-placeholder" data-prefix="Main_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>** we created in Mission 1 of Core track, make sure **Edit** toggle is **ON** 
 
-5. Add Global Variable **<span class="attendee-id-container">EmergencyGV_<span class="attendee-id-placeholder" data-prefix="EmergencyGV_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**and make sure Default Value is set to **False** in General Settings of the flow as shown on the following picture.
+5. Add Global Variable **<span class="attendee-id-container">EmergencyGV_<span class="attendee-id-placeholder" data-prefix="EmergencyGV_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**and make sure Default Value is set to **True** in General Settings of the flow as shown on the following picture.
 
     ![Profiles](../graphics/Lab2/GV_True.png) </br>
     ![Profiles](../graphics/Lab2/BM1-Test4-GV.gif)

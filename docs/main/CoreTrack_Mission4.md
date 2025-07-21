@@ -82,17 +82,17 @@ Event flows enable a wide range of scenarios, with one common use case being the
     
     ![profiles](../graphics/Lab1/AM2_httpevent.gif)
     
-5. Modify **Screenpop** configuration in the same flow
+7. Modify **Screenpop** configuration in the same flow
 
     > Screen Pop URL: **[https://www.cisco.com/site/us/en/index.html](https://www.cisco.com/site/us/en/index.html){:target="_blank"}**<span class="copy-static" title="Click to copy!" data-copy-text="https://www.cisco.com/site/us/en/index.html"><span class="copy"></span></span>
     >
     > Screen Pop Desktop Label: **Cisco Official Web Site**<span class="copy-static" title="Click to copy!" data-copy-text="Cisco Official Web Site"><span class="copy"></span></span>
     >
-    > Display Settings: **Inside Desktop**
+    > Display Settings: **New browser tab**
   
     ![profiles](../graphics/Lab1/AM2_Screenpop.gif)
     
-6. Validate the flow by clicking **Validate**, **Publish** and select the Latest version of the flow
+8. Validate the flow by clicking **Validate**, **Publish** and select the Latest version of the flow
     
 ## Testing
     
@@ -111,9 +111,9 @@ We recommend removing the ScreenPop node after testing. Otherwise, every time yo
 
 1. Open your flow **<span class="attendee-id-container">Main_Flow_<span class="attendee-id-placeholder" data-prefix="Main_Flow_">Your_Attendee_ID</span><span class="copy" title="Click to copy!"></span></span>**. Make sure **Edit** toggle is **ON**.
 
-2. Navigate to **Even Flows** and delete **Screenpop** node
+2. Navigate to **Even Flows** and delete **Screenpop** and **End Flow** nodes.
 
-3. Validate the flow by clicking **Validate**, **Publish** and select the Latest version of the flow
+3. Validate the flow by clicking **Validate**, **Publish** and select the Latest version of the flow.
 
 ![profiles](../graphics/Lab1/AM2_Screenpop_delete.gif)
 
