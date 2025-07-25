@@ -63,7 +63,7 @@ Your mission is to:
         **Agent**: Hello, hello, hello</br>
 
 
-6. From the Agent Call Controls, transfer the call to transfer call to the Queue **Q_CallDrop**. Click the “Queue” radio button to search for this Queue.
+6. From the Agent Call Controls, transfer the call to transfer call to the Queue **CCBU_ExecDemo_Q_CallDrop**. Click the “Queue” radio button to search for this Queue.
 
 
   ![Profiles](../graphics/AI_Track/CallDropSum_Transfer.gif)
@@ -71,7 +71,7 @@ Your mission is to:
 7. **Wait for the call to timeout and disconnect. This simulates an accidental call drop.**
 
     !!! Note
-        Since the call drop must be system initiated, the queue **Q_CallDrop** has been pre-configured with a maximum time in queue of 10 seconds (pictured on screenshot from Control Hub). Wait in the queue for about 10 seconds for the system to drop the call "automatically". 
+        Since the call drop must be system initiated, the queue **CCBU_ExecDemo_Q_CallDrop** has been pre-configured with a maximum time in queue of 10 seconds (pictured on screenshot from Control Hub). Wait in the queue for about 10 seconds for the system to drop the call "automatically". 
     
     ![Profiles](../graphics/Lab2/CallDropSum_DummyQueue.png)
 
